@@ -25,6 +25,38 @@ const typeDefs = gql`
     category: String
   }
 
+  type Experience {
+    _id: ID!
+    company: String
+    title: String
+    dateRange: String
+    location: String
+    description1: String
+    description2: String
+    description3: String
+    description4: String
+    description5: String
+    description6: String
+    description7: String
+    description8: String
+    description9: String
+    description10: String
+    description11: String
+    description12: String
+    description13: String
+    description14: String
+    description15: String
+  }
+
+  type Education {
+    _id: ID!
+    focus: String
+    school: String
+    dates: String
+    location: String
+    program: String
+  }
+
   type Auth {
     token: ID!
     user: User
@@ -37,6 +69,10 @@ const typeDefs = gql`
     project(projectId: ID!): Project
     interests: [Interest]!
     interest(interestId: ID!): Interest
+    educations: [Education]!
+    education(educationId: ID!): Education
+    experiences: [Experience]!
+    experience(experienceId: ID!): Experience
     me: User
   }
 

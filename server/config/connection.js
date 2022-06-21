@@ -21,18 +21,23 @@ if (database === "MySQL ") {
         }
       );
 
+  module.exports = { database, connection };
+
+
 } else if (database === "MongoDB") {
 
-  const mongoose = require('mongoose');
 
-  const connection = mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/portfolioDB', {
+  const { connect, connection } = require('mongoose');
+
+  const connectionString =
+  process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/portfolioDB';
+
+  connect(connectionString, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true,
     useFindAndModify: false,
   });
 
+  module.exports = { database, connection };
 }
-
-
-module.exports = { database, connection };
