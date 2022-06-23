@@ -25,6 +25,15 @@ const typeDefs = gql`
     category: String
   }
 
+  type Education {
+    _id: ID!
+    focus: String
+    school: String
+    dates: String
+    location: String
+    program: String
+  }
+
   type Experience {
     _id: ID!
     company: String
@@ -48,15 +57,6 @@ const typeDefs = gql`
     description15: String
   }
 
-  type Education {
-    _id: ID!
-    focus: String
-    school: String
-    dates: String
-    location: String
-    program: String
-  }
-
   type Auth {
     token: ID!
     user: User
@@ -65,7 +65,7 @@ const typeDefs = gql`
   type Query {
     users: [User]!
     user(userId: ID!): User
-    projects: [User]!
+    projects: [Project]!
     project(projectId: ID!): Project
     interests: [Interest]!
     interest(interestId: ID!): Interest

@@ -1,9 +1,6 @@
 const path = require("path");
 // const routes = require('./routes');
 const express = require("express");
-const { authMiddleware } = require("./utils/auth");
-const { ApolloServer } = require("apollo-server-express");
-const { typeDefs, resolvers } = require("./schemas");
 const { database, connection } = require("./config/connection");
 const PORT = process.env.PORT || 3001;
 const app = express();
@@ -15,7 +12,6 @@ if (process.env.NODE_ENV === 'production') {
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "../client/build/index.html"));
 });
-const cwd = process.cwd();
 // app.use(routes);
 
 
@@ -43,11 +39,16 @@ if (database === "MySQL ") {
 } else if (database === "MongoDB") {
 
 
+const { authMiddleware } = require("./utils/auth");
+const { ApolloServer } = require("apollo-server-express");
+const { typeDefs, resolvers } = require("./schemas");
+const cwd = process.cwd();
+
   //ADD APOLLO SERVER------------------------
   const server = new ApolloServer({
     typeDefs,
     resolvers,
-    context: authMiddleware,
+    // context: authMiddleware,
   });
   //----------------------------------------
 
@@ -69,6 +70,5 @@ if (database === "MySQL ") {
   };
 
   startApolloServer(typeDefs, resolvers);
-
 }
 

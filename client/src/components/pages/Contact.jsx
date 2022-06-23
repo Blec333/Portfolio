@@ -83,22 +83,22 @@ export default function Contact() {
             <div className="">
               <div className="table-row hover">
                 <div className="table-cell text-primary-content mt-4 mr-4 text-right">Name: </div>
-                <input id="contact-name" type="text" placeholder="Name" className="input input-bordered table-cell text-primary-content mt-4" onBlur={() => nameNotify(displayNameNotification())} onChange={() => nameNotify(displayNameNotification())} />
+                <input id="contact-name" type="text" placeholder="Name" className="input input-bordered table-cell text-primary-content mt-4" onChange={() => nameNotify(displayNameNotification())} />
                 <p id="name-notification" className='h-[1rem] mb-4 ml-4 text-primary-content text-left'>{nameNotification}</p>
               </div>
               <div className="table-row hover">
                 <div className="table-cell text-primary-content mt-4 mr-4 text-right">Return Email: </div>
-                <input id="email-address" type="text" placeholder="info@site.com" className="input input-bordered table-cell text-primary-content mt-4" onBlur={() => emailNotify(displayEmailNotification())} onChange={() => emailNotify(displayEmailNotification())} />
+                <input id="email-address" type="text" placeholder="info@site.com" className="input input-bordered table-cell text-primary-content mt-4" onChange={() => emailNotify(displayEmailNotification())} />
                 <p id="email-notification" className='h-[1rem] mb-4 ml-4 text-primary-content text-left'>{emailNotification}</p>
               </div>
               <div className="table-row hover">
                 <div className="table-cell text-primary-content mt-4 mr-4 text-right">Subject: </div>
-                <input id="email-subject" type="text" placeholder="Subject" className="input input-bordered table-cell text-primary-content mt-4" onBlur={() => subjectNotify(displaySubjectNotification())} onChange={() => subjectNotify(displaySubjectNotification())} />
+                <input id="email-subject" type="text" placeholder="Subject" className="input input-bordered table-cell text-primary-content mt-4" onChange={() => subjectNotify(displaySubjectNotification())} />
                 <p id="subject-notification" className='h-[1rem] mb-4 ml-4 text-primary-content text-left'>{subjectNotification}</p>
               </div>
               <div className="table-row hover">
                 <div className="table-cell text-primary-content mt-4 mr-4 text-right">Message: </div>
-                <input id="email-body" type="text" placeholder="Message" className="input input-bordered table-cell text-primary-content mt-4" onBlur={() => bodyNotify(displayBodyNotification())} onChange={() => bodyNotify(displayBodyNotification())} />
+                <input id="email-body" type="text" placeholder="Message" className="input input-bordered table-cell text-primary-content mt-4" onChange={() => bodyNotify(displayBodyNotification())} />
                 <p id="message-notification" className='h-[1rem] mb-4 ml-4 text-primary-content text-left'>{bodyNotification}</p>
               </div>
             </div>

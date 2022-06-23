@@ -22,22 +22,14 @@ export default function Resume() {
         </div>
         <div className="bg-transparent text-center">
           <br />
-          <h1 className="text-3xl text-bold underline text-primary-content text-center">Technical Skills</h1>
+          <h1 className="text-3xl text-bold underline text-primary-content text-center p-4">Technical Skills</h1>
           <br />
-          <div className="text-primary-content text-center">Dynamo, C#, HTML, CSS, JavaScript, Python, Lisp, VBA (.COD,
-            Excel), AutoCAD, Revit, Fabrication CADmep, CAMduct, Design Line, APL, Glue, Navis, Bluebeam, 360: Field,
-            Docs, Collab, Procore, Box, Trimble, Lidar, Matterport, Microsoft Office (Word, Excel, PowerPoint,
-            Outlook)</div>
+          <div className="text-primary-content text-center">Problem-Solving, Pseudocode, HTML5, Cascading Style Sheets (CSS), Javascript, ES6, Command Line, Developer Tools (Elements, Console, Network, Sources, Application, etc), Bootstrap, Web API, jQuery, Server Side API, Third Party API, Momentjs, indexDB, Insomnia / Postman, AJAX, Fetch, JSON, Git, GitHub, Node.js, Express.js, Rest API, Serverside Templating (Handlebars.js), Heroku, Express Sessions, bcrypt, JWT Javascript Web Token, Relational Databases, MySQL, Sequelize ORM, Non-Relational Databases, Mongo DB, Mongoose ODM, Object-oriented Programming (OOP), Imperative Programming, Declarative Programming, TDD, Unit Testing w/ JEST, React, React Hooks, JSX, Data Structures and Algorithms, Frontend Development, Backend Development, Full Stack Development, Performance, Webpack, PWA, Apollo GraphQL, Context API, MERN Stack, Stripe API, Redux, Lisp,  VBA .COD,  Dynamo,  C#,  Python,  AutoCAD,  Revit,  Fabrication CADmep,  CAMduct,  Design Line,  APL,  Glue,  Navis,  Bluebeam,  A360 Field, A360  Docs,  Procore,  Box,  Trimble,  Lidar,  Matterport,  Microsoft Word, PowerPoint,  Outlook,  Excel</div>
           <br />
           <br />
-          <h1 className="text-3xl text-bold underline text-primary-content text-center">Core Competencies</h1>
+          <h1 className="text-3xl text-bold underline text-primary-content text-center p-4">Core Competencies</h1>
           <br />
-          <div className="text-primary-content text-center">Project Management | Project Planning | BIM Management |
-            Strategic Planning | Project Execution | Cost & Quality Control | Mechanical Drafting & Detailing |
-            Schedule Management | Change Management | Shop Fabrication | Engineering Design | Project Lifecycle |
-            Inventory Controls | Profit and Loss Management | Resource Maintenance | Program Planning | Vendor
-            Management | Staff Coordination | Executive Leadership | Interpersonal Skills | Excellent Communication
-            Skills</div>
+          <div className="text-primary-content text-center">MERN Fullstack Software Development | Project Management | Project Planning | BIM Management | Strategic Planning | Project Execution | Cost & Quality Control | Mechanical Drafting & Detailing | Schedule Management | Change Management | Shop Fabrication | Mechanical Engineering Design | Project Lifecycle | Inventory Controls | Profit and Loss Management | Resource Maintenance | Program Planning | Vendor Management | Staff Coordination | Executive Leadership | Interpersonal Skills | Excellent Communication Skills</div>
         </div>
 
         <br />

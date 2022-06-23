@@ -43,7 +43,7 @@ const resolvers = {
   },
 
   // 🔑 We call the signToken() function in the resolvers where we want to transmit data securely to generate a signed token:
-  Mutation: {
+  // Mutation: {
     // login: async (parent, { username, email, password }) => {
     //   const user = await User.findOne({ email: email });
     //   if (!user) {
@@ -149,7 +149,7 @@ const resolvers = {
     //     { new: true }
     //   );
     // },
-  },
+  // },
 };
 
 module.exports = resolvers;
