@@ -1,60 +1,60 @@
-const { database, connection } = require("../config/connection");
+// const { database, connection } = require("../config/connection");
 
 
 
-if (database === "MySQL") {
+// if (database === "MySQL") {
 
-  const { Model, DataTypes } = require('sequelize');
-  class Project extends Model { }
-  Project.init(
-    {
-      id: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-        primaryKey: true,
-        autoIncrement: true,
-      },
-      projectName: {
-        type: DataTypes.STRING,
-        allowNull: false,
-      },
-      category: {
-        type: DataTypes.STRING,
-        allowNull: true,
-      },
-      type: {
-        type: DataTypes.STRING,
-        allowNull: true,
-      },
-      industry: {
-        type: DataTypes.STRING,
-        allowNull: true,
-      },
-      scale: {
-        type: DataTypes.STRING,
-        allowNull: true,
-      },
-      oversight: {
-        type: DataTypes.STRING,
-        allowNull: true,
-      },
-      client: {
-        type: DataTypes.STRING,
-        allowNull: true,
-      },
-    },
-    {
-      connection,
-      timestamps: false,
-      freezeTableName: true,
-      underscored: false,
-      modelName: 'project',
-    }
-  );
-  module.exports = Project;
+//   const { Model, DataTypes } = require('sequelize');
+//   class Project extends Model { }
+//   Project.init(
+//     {
+//       id: {
+//         type: DataTypes.INTEGER,
+//         allowNull: false,
+//         primaryKey: true,
+//         autoIncrement: true,
+//       },
+//       projectName: {
+//         type: DataTypes.STRING,
+//         allowNull: false,
+//       },
+//       category: {
+//         type: DataTypes.STRING,
+//         allowNull: true,
+//       },
+//       type: {
+//         type: DataTypes.STRING,
+//         allowNull: true,
+//       },
+//       industry: {
+//         type: DataTypes.STRING,
+//         allowNull: true,
+//       },
+//       scale: {
+//         type: DataTypes.STRING,
+//         allowNull: true,
+//       },
+//       oversight: {
+//         type: DataTypes.STRING,
+//         allowNull: true,
+//       },
+//       client: {
+//         type: DataTypes.STRING,
+//         allowNull: true,
+//       },
+//     },
+//     {
+//       connection,
+//       timestamps: false,
+//       freezeTableName: true,
+//       underscored: false,
+//       modelName: 'project',
+//     }
+//   );
+//   module.exports = Project;
 
 
-} else if (database === "MongoDB") {
+// } else if (database === "MongoDB") {
 
 
   const { Schema, model } = require('mongoose');
@@ -87,4 +87,4 @@ if (database === "MySQL") {
 
   const Project = model('Project', projectSchema);
   module.exports = Project;
-}
+// }

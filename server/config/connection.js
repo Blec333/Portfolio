@@ -1,30 +1,30 @@
-const database = "MongoDB"// either "MongoDB" or "MySQL"
+// const database = "MongoDB"// either "MongoDB" or "MySQL"
 
 
-if (database === "MySQL ") {
+// if (database === "MySQL ") {
 
-  const Sequelize = require("sequelize");
-  require("dotenv").config();
+//   const Sequelize = require("sequelize");
+//   require("dotenv").config();
 
-  const connection =
-    process.env.JAWSDB_URL
-      // false
-      ? new Sequelize(process.env.JAWSDB_URL)
-      : new Sequelize(
-        process.env.DB_NAME,
-        process.env.DB_USER,
-        process.env.DB_PASSWORD,
-        {
-          host: "127.0.0.1",
-          dialect: "mysql",
-          port: 3306,
-        }
-      );
+//   const connection =
+//     process.env.JAWSDB_URL
+//       // false
+//       ? new Sequelize(process.env.JAWSDB_URL)
+//       : new Sequelize(
+//         process.env.DB_NAME,
+//         process.env.DB_USER,
+//         process.env.DB_PASSWORD,
+//         {
+//           host: "127.0.0.1",
+//           dialect: "mysql",
+//           port: 3306,
+//         }
+//       );
 
-  module.exports = { database, connection };
+//   module.exports = { database, connection };
 
 
-} else if (database === "MongoDB") {
+// } else if (database === "MongoDB") {
 
 
   const { connect, connection } = require('mongoose');
@@ -38,4 +38,4 @@ if (database === "MySQL ") {
   });
 
   module.exports = { database, connection };
-}
+// }

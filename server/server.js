@@ -15,28 +15,28 @@ app.get("/", (req, res) => {
 // app.use(routes);
 
 
-if (database === "MySQL ") {
+// if (database === "MySQL ") {
 
-  const session = require("express-session");
-  // const routes = require("./controllers");
-  const SequelizeStore = require("connect-session-sequelize")(session.Store);
-  const sess = {
-    secret: "SuperDuper Secreter Secret Secret",
-    cookie: { maxAge: 1000000 },
-    resave: false,
-    saveUninitialized: true,
-    store: new SequelizeStore({
-      db: connection,
-    }),
-  };
-  app.use(session(sess));
+//   const session = require("express-session");
+//   // const routes = require("./controllers");
+//   const SequelizeStore = require("connect-session-sequelize")(session.Store);
+//   const sess = {
+//     secret: "SuperDuper Secreter Secret Secret",
+//     cookie: { maxAge: 1000000 },
+//     resave: false,
+//     saveUninitialized: true,
+//     store: new SequelizeStore({
+//       db: connection,
+//     }),
+//   };
+//   app.use(session(sess));
 
-  connection.sync({ force: false }).then(() => {
-    app.listen(PORT, () => console.log(`🌍 Now listening on localhost:${PORT}`));
-  });
+//   connection.sync({ force: false }).then(() => {
+//     app.listen(PORT, () => console.log(`🌍 Now listening on localhost:${PORT}`));
+//   });
 
 
-} else if (database === "MongoDB") {
+// } else if (database === "MongoDB") {
 
 
 const { authMiddleware } = require("./utils/auth");
@@ -70,5 +70,5 @@ const cwd = process.cwd();
   };
 
   startApolloServer(typeDefs, resolvers);
-}
+// }
 
