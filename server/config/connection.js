@@ -37,5 +37,5 @@
     useFindAndModify: false,
   });
 
-  module.exports = { database, connection };
+  module.exports = { connection };
 // }
