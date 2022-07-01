@@ -2,6 +2,7 @@ import React from 'react';
 import CarouselAutodesk from '../CarouselAutodesk';
 import CarouselMERNStack from '../CarouselMERNStack';
 import CarouselWorkbooks from '../CarouselWorkbooks';
+import CarouselOther from '../CarouselOther';
 
 export default function Portfolio() {
   return (
@@ -13,6 +14,8 @@ export default function Portfolio() {
         <CarouselAutodesk />
         <h1 className="text-center text-3xl text-neutral-content fontsize-bold">Workbooks</h1>
         <CarouselWorkbooks />
+        <h1 className="text-center text-3xl text-neutral-content fontsize-bold">Other</h1>
+        <CarouselOther />
       </div>
     </>
   );
