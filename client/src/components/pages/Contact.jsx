@@ -78,30 +78,50 @@ export default function Contact() {
         <br />
         <br />
         <h1 className="font-semibold text-xl text-primary-content mt-4 text-center">Contact Me</h1>
-        <div className="flex text-center justify-center">
-          <div className="table-auto">
-            <div className="">
-              <div className="table-row hover">
-                <div className="table-cell text-primary-content mt-4 mr-4 text-right">Name: </div>
+        <div className="flex text-center justify-center w-full">
+          <div className="grid grid-cols-2 w-full">
+
+                <div className="text-primary-content mt-4 mr-4 text-right">Name: </div>
+
                 <input id="contact-name" type="text" placeholder="Name" className="input input-bordered table-cell text-primary-content mt-4" onChange={() => nameNotify(displayNameNotification())} />
+
+                <div className=""></div>
+
                 <p id="name-notification" className='h-[1rem] mb-4 ml-4 text-primary-content text-left'>{nameNotification}</p>
-              </div>
-              <div className="table-row hover">
+
+
+
                 <div className="table-cell text-primary-content mt-4 mr-4 text-right">Return Email: </div>
+
                 <input id="email-address" type="text" placeholder="info@site.com" className="input input-bordered table-cell text-primary-content mt-4" onChange={() => emailNotify(displayEmailNotification())} />
+
+                <div className=""></div>
                 <p id="email-notification" className='h-[1rem] mb-4 ml-4 text-primary-content text-left'>{emailNotification}</p>
-              </div>
-              <div className="table-row hover">
-                <div className="table-cell text-primary-content mt-4 mr-4 text-right">Subject: </div>
+            
+
+
+
+                <div className="text-primary-content mt-4 mr-4 text-right">Subject: </div>
+
                 <input id="email-subject" type="text" placeholder="Subject" className="input input-bordered table-cell text-primary-content mt-4" onChange={() => subjectNotify(displaySubjectNotification())} />
+
+                <div className=""></div>
+                
                 <p id="subject-notification" className='h-[1rem] mb-4 ml-4 text-primary-content text-left'>{subjectNotification}</p>
-              </div>
-              <div className="table-row hover">
-                <div className="table-cell text-primary-content mt-4 mr-4 text-right">Message: </div>
-                <input id="email-body" type="text" placeholder="Message" className="input input-bordered table-cell text-primary-content mt-4" onChange={() => bodyNotify(displayBodyNotification())} />
+            
+            
+
+
+                <div className="text-primary-content w-32 h-32 mt-4 mr-4 text-right">Message: </div>
+
+                <input id="email-body" type="text" placeholder="Message" className="input input-bordered table-cell text-primary-content w-32 h-32 mt-4" onChange={() => bodyNotify(displayBodyNotification())} />
+
+                <div className=""></div>
+
                 <p id="message-notification" className='h-[1rem] mb-4 ml-4 text-primary-content text-left'>{bodyNotification}</p>
-              </div>
-            </div>
+            
+
+            
           </div>
         </div>
       </div>
