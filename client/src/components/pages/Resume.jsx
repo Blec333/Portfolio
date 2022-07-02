@@ -1,8 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import profilePic from "../../img/Profile-Picture.png";
 import resumeDownload from "../../img/LeClair-Resume.docx";
 
 export default function Resume() {
+
+
+  const [nameNotification, nameNotify] = useState('');
+
+
+
+
+
   return (
     <>
       <div className="bg-transparent justify-center text-center">
@@ -24,7 +32,8 @@ export default function Resume() {
           <br />
           <h1 className="text-3xl text-bold underline text-primary-content text-center p-4">Technical Skills</h1>
           <br />
-          <div className="text-primary-content text-center">Problem-Solving, Pseudocode, HTML5, Cascading Style Sheets (CSS), Javascript, ES6, Command Line, Developer Tools (Elements, Console, Network, Sources, Application, etc), Bootstrap, Web API, jQuery, Server Side API, Third Party API, Momentjs, indexDB, Insomnia / Postman, AJAX, Fetch, JSON, Git, GitHub, Node.js, Express.js, Rest API, Serverside Templating (Handlebars.js), Heroku, Express Sessions, bcrypt, JWT Javascript Web Token, Relational Databases, MySQL, Sequelize ORM, Non-Relational Databases, Mongo DB, Mongoose ODM, Object-oriented Programming (OOP), Imperative Programming, Declarative Programming, TDD, Unit Testing w/ JEST, React, React Hooks, JSX, Data Structures and Algorithms, Frontend Development, Backend Development, Full Stack Development, Performance, Webpack, PWA, Apollo GraphQL, Context API, MERN Stack, Stripe API, Redux, Lisp,  VBA .COD,  Dynamo,  C#,  Python,  AutoCAD,  Revit,  Fabrication CADmep,  CAMduct,  Design Line,  APL,  Glue,  Navis,  Bluebeam,  A360 Field, A360  Docs,  Procore,  Box,  Trimble,  Lidar,  Matterport,  Microsoft Word, PowerPoint,  Outlook,  Excel</div>
+          <div className="text-primary-content text-center">Problem-Solving, Pseudocode, HTML5, Cascading Style Sheets (CSS), Javascript, ES6, Command Line, Developer Tools (Elements, Console, Network, Sources, Application, etc), Bootstrap, Web API, jQuery, Server Side API, Third Party API, Momentjs, indexDB, Insomnia / Postman, AJAX, Fetch, JSON, Git, GitHub, Node.js, Express.js, Rest API, Serverside Templating (Handlebars.js), Heroku, Express Sessions, bcrypt, JWT Javascript Web Token, Relational Databases, MySQL, Sequelize ORM, Non-Relational Databases, Mongo DB, Mongoose ODM, Object-oriented Programming (OOP), Imperative Programming, Declarative Programming, TDD, Unit Testing w/ JEST, React, React Hooks, JSX, Data Structures and Algorithms, Frontend Development, Backend Development, Full Stack Development, Performance, Webpack, PWA, Apollo GraphQL, Context API, MERN Stack, Stripe API, Redux, Lisp,  VBA .COD,  Dynamo,  C#,  Python,  AutoCAD,  Revit,  Fabrication CADmep,  CAMduct,  Design Line,  APL,  Glue,  Navis,  Bluebeam,  A360 Field, A360  Docs,  Procore,  Box,  Trimble,  Lidar,  Matterport,  Microsoft Word, PowerPoint,  Outlook,  Excel
+          </div>
           <br />
           <br />
           <h1 className="text-3xl text-bold underline text-primary-content text-center p-4">Core Competencies</h1>
