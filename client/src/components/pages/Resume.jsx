@@ -5,7 +5,9 @@ import resumeDownload from "../../img/LeClair-Resume.docx";
 export default function Resume() {
 
 
-  const [nameNotification, nameNotify] = useState('');
+  const [technicalSkills, setTechnicalSkills] = useState('');
+  const [coreCompetencies, setCoreCompetencies] = useState('');
+  const [projects, setProjects] = useState('');
 
 
 
