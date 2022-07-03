@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import { useQuery } from "@apollo/client";
-import { QUERY_TECHNICAL_SKILLS } from "../../utils/queries";
+import { QUERY_CORE_COMPETENCIES, QUERY_TECHNICAL_SKILLS } from "../../utils/queries";
 
 import profilePic from "../../img/Profile-Picture.png";
 import resumeDownload from "../../img/LeClair-Resume.docx";
+import { useEffect } from 'react';
 
 export default function Resume() {
 
@@ -13,9 +14,13 @@ export default function Resume() {
   const [projects, setProjects] = useState('');
 
 
-  // const { data } = useQuery(QUERY_TECHNICAL_SKILLS);
+  const { skillData } = useQuery(QUERY_TECHNICAL_SKILLS);
+  const { competencyData } = useQuery(QUERY_CORE_COMPETENCIES);
 
-
+  useEffect(() => {
+  console.log(skillData);
+  console.log(competencyData);
+  },[skillData, competencyData])
 
   return (
     <>
