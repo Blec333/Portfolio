@@ -33,6 +33,7 @@ export const QUERY_PROJECTS = gql`
       scale
       oversight
       client
+    }
   }
 `;
 
@@ -165,6 +166,24 @@ export const QUERY_SINGLE_TECHNICAL_SKILL = gql`
     technicalSkill(technicalSkillId: $technicalSkillId) {
       _id
       skill
+    }
+  }
+`;
+
+export const QUERY_CORE_COMPETENCIES = gql`
+  {
+    coreCompetencies {
+      _id
+      coreCompetency
+    }
+  }
+`;
+
+export const QUERY_SINGLE_CORE_COMPETENCY = gql`
+  query coreCompetency($coreCompetencyId: ID!) {
+    coreCompetency(coreCompetencyId: $coreCompetencyId) {
+      _id
+      coreCompetency
     }
   }
 `;

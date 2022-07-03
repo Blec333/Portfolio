@@ -13,7 +13,7 @@ export default function Resume() {
   const [projects, setProjects] = useState('');
 
 
-  const { data } = useQuery(QUERY_TECHNICAL_SKILLS);
+  // const { data } = useQuery(QUERY_TECHNICAL_SKILLS);
 
 
 

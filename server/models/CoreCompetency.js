@@ -14,7 +14,7 @@ if (database === "MySQL") {
         primaryKey: true,
         autoIncrement: true,
       },
-      skill: {
+      coreCompetency: {
         type: DataTypes.STRING,
         allowNull: false,
       },
@@ -36,7 +36,7 @@ if (database === "MySQL") {
   const { Schema, model } = require('mongoose');
   const coreCompetencySchema = new Schema(
     {
-      skill: {
+      coreCompetency: {
         type: String,
         required: true,
       },

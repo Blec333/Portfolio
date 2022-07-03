@@ -43,7 +43,7 @@ const seedAll = async () => {
     await seedTechnicalSkills();
     console.log("\n----- Technical Skills SEEDED -----\n");
     await seedCoreCompetencies();
-    console.log("\n----- Core Comptencies SEEDED -----\n");
+    console.log("\n----- Core Competencies SEEDED -----\n");
     console.info('Seeding complete! 🌱');
     process.exit(0);
 
@@ -78,7 +78,7 @@ const seedAll = async () => {
       await seedTechnicalSkills();
       console.log("\n----- Technical Skills SEEDED -----\n");
       await seedCoreCompetencies();
-      console.log("\n----- Core Comptencies SEEDED -----\n");
+      console.log("\n----- Core Competencies SEEDED -----\n");
       console.info('Seeding complete! 🌱');
       process.exit(0);
     });

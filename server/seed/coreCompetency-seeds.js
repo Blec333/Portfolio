@@ -1,70 +1,70 @@
 const coreCompetencyData = [
   {
-    coreComptency: "MERN Fullstack Software Development",
+    coreCompetency: "MERN Fullstack Software Development",
     },
     {
-    coreComptency: "Project Management",
+    coreCompetency: "Project Management",
     },
     {
-    coreComptency: "Project Planning",
+    coreCompetency: "Project Planning",
     },
     {
-    coreComptency: "BIM Management",
+    coreCompetency: "BIM Management",
     },
     {
-    coreComptency: "Strategic Planning",
+    coreCompetency: "Strategic Planning",
     },
     {
-    coreComptency: "Project Execution",
+    coreCompetency: "Project Execution",
     },
     {
-    coreComptency: "Cost & Quality Control",
+    coreCompetency: "Cost & Quality Control",
     },
     {
-    coreComptency: "Mechanical Drafting & Detailing",
+    coreCompetency: "Mechanical Drafting & Detailing",
     },
     {
-    coreComptency: "Schedule Management",
+    coreCompetency: "Schedule Management",
     },
     {
-    coreComptency: "Change Management",
+    coreCompetency: "Change Management",
     },
     {
-    coreComptency: "Shop Fabrication",
+    coreCompetency: "Shop Fabrication",
     },
     {
-    coreComptency: "Mechanical Engineering Design",
+    coreCompetency: "Mechanical Engineering Design",
     },
     {
-    coreComptency: "Project Lifecycle",
+    coreCompetency: "Project Lifecycle",
     },
     {
-    coreComptency: "Inventory Controls",
+    coreCompetency: "Inventory Controls",
     },
     {
-    coreComptency: "Profit and Loss Management",
+    coreCompetency: "Profit and Loss Management",
     },
     {
-    coreComptency: "Resource Maintenance",
+    coreCompetency: "Resource Maintenance",
     },
     {
-    coreComptency: "Program Planning",
+    coreCompetency: "Program Planning",
     },
     {
-    coreComptency: "Vendor Management",
+    coreCompetency: "Vendor Management",
     },
     {
-    coreComptency: "Staff Coordination",
+    coreCompetency: "Staff Coordination",
     },
     {
-    coreComptency: "Executive Leadership",
+    coreCompetency: "Executive Leadership",
     },
     {
-    coreComptency: "Interpersonal Skills",
+    coreCompetency: "Interpersonal Skills",
     },
     {
-    coreComptency: "Excellent Communication Skills",
-    },    
+    coreCompetency: "Excellent Communication Skills",
+    }
 ];
 
 
