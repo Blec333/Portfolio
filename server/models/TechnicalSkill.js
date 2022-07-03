@@ -5,8 +5,8 @@ const { database, connection } = require("../config/connection");
 if (database === "MySQL") {
 
   const { Model, DataTypes } = require('sequelize');
-  class TechnicalSkills extends Model { }
-  TechnicalSkills.init(
+  class TechnicalSkill extends Model { }
+  TechnicalSkill.init(
     {
       id: {
         type: DataTypes.INTEGER,
@@ -14,8 +14,8 @@ if (database === "MySQL") {
         primaryKey: true,
         autoIncrement: true,
       },
-      skills: {
-        type: DataTypes.ARRAY,
+      skill: {
+        type: DataTypes.STRING,
         allowNull: false,
       },
     },
@@ -24,25 +24,25 @@ if (database === "MySQL") {
       timestamps: false,
       freezeTableName: true,
       underscored: false,
-      modelName: 'technicalSkills',
+      modelName: 'technicalSkill',
     }
   );
-  module.exports = TechnicalSkills;
+  module.exports = TechnicalSkill;
 
 
 } else if (database === "MongoDB") {
 
 
   const { Schema, model } = require('mongoose');
-  const technicalSkillsSchema = new Schema(
+  const technicalSkillSchema = new Schema(
     {
-      skills: {
-        type: Array,
+      skill: {
+        type: String,
         required: true,
       },
     }
   );
 
-  const TechnicalSkills = model('TechnicalSkills', technicalSkillsSchema);
-  module.exports = TechnicalSkills;
+  const TechnicalSkill = model('TechnicalSkill', technicalSkillSchema);
+  module.exports = TechnicalSkill;
 }

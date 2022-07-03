@@ -57,6 +57,16 @@ const typeDefs = gql`
     description15: String
   }
 
+  type TechnicalSkill {
+    _id: ID!
+    skill: String
+  }
+
+  type CoreCompetency {
+    _id: ID!
+    coreCompetency: String
+  }
+
   type Auth {
     token: ID!
     user: User
@@ -73,6 +83,10 @@ const typeDefs = gql`
     education(educationId: ID!): Education
     experiences: [Experience]!
     experience(experienceId: ID!): Experience
+    technicalSkills: [TechnicalSkill]!
+    technicalSkill(technicalSkillId: ID!): TechnicalSkill
+    coreCompetencies: [CoreCompetency]!
+    coreCompetency(coreCompetencyId: ID!): CoreCompetency
     me: User
   }
 
@@ -86,7 +100,6 @@ const typeDefs = gql`
     addProject(projectName: String, category: String, type: String, industry: String, scale: String, oversight: String, client: String): Project
     updateProject(projectName: String, category: String, type: String, industry: String, scale: String, oversight: String, client: String): Project
     removeProject(projectId: ID!): Project
-
   }
 `;
 

@@ -151,6 +151,24 @@ export const QUERY_SINGLE_EXPERIENCE = gql`
   }
 `;
 
+export const QUERY_TECHNICAL_SKILLS = gql`
+  {
+    technicalSkills {
+      _id
+      skill
+    }
+  }
+`;
+
+export const QUERY_SINGLE_TECHNICAL_SKILL = gql`
+  query technicalSkill($technicalSkillId: ID!) {
+    technicalSkill(technicalSkillId: $technicalSkillId) {
+      _id
+      skill
+    }
+  }
+`;
+
 export const QUERY_ME = gql`
   {
     me {

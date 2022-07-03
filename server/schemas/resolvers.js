@@ -1,5 +1,13 @@
 const { AuthenticationError } = require("apollo-server-express");
-const { User, Project, Interest, Education, Experience } = require("../models");
+const {
+  User,
+  Project,
+  Interest,
+  Education,
+  Experience,
+  TechnicalSkill,
+  CoreCompetency
+} = require("../models");
 const { signToken } = require("../utils/auth");
 
 const resolvers = {
@@ -33,6 +41,18 @@ const resolvers = {
     },
     experience: async (parent, { experienceId }) => {
       return Experience.findOne({ _id: experienceId });
+    },
+    technicalSkills: async () => {
+      return TechnicalSkill.find();
+    },
+    technicalSkill: async (parent, { technicalSkillId }) => {
+      return TechnicalSkill.findOne({ _id: technicalSkillId });
+    },
+    coreCompetencies: async () => {
+      return CoreCompetency.find();
+    },
+    coreCompetency: async (parent, { coreCompetencyId }) => {
+      return CoreCompetency.findOne({ _id: coreCompetencyId });
     },
     me: async (parent, args, context) => {
       if (context.user) {

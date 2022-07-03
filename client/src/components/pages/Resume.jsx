@@ -1,4 +1,7 @@
 import React, { useState } from 'react';
+import { useQuery } from "@apollo/client";
+import { QUERY_TECHNICAL_SKILLS } from "../../utils/queries";
+
 import profilePic from "../../img/Profile-Picture.png";
 import resumeDownload from "../../img/LeClair-Resume.docx";
 
@@ -10,6 +13,7 @@ export default function Resume() {
   const [projects, setProjects] = useState('');
 
 
+  const { data } = useQuery(QUERY_TECHNICAL_SKILLS);
 
 
 

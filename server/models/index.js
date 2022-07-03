@@ -3,7 +3,8 @@ const Interest = require('./Interest');
 const Project = require('./Project');
 const Education = require('./Education');
 const Experience = require('./Experience');
-const TechnicalSkills = require('./Technical-Skills');
+const TechnicalSkill = require('./TechnicalSkill');
+const CoreCompetency = require('./CoreCompetency');
 
 module.exports = {
   User,
@@ -11,5 +12,6 @@ module.exports = {
   Project,
   Education,
   Experience,
-  TechnicalSkills
+  TechnicalSkill,
+  CoreCompetency
 };
