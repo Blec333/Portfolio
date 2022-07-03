@@ -1,10 +1,20 @@
 const { database, connection } = require("../config/connection");
-const { Experience, Project, Interest, Education, User } = require("../models");
+const {
+  Experience,
+  Project,
+  Interest,
+  Education,
+  User,
+  TechnicalSkill,
+  CoreCompetency
+} = require("../models");
 const experienceData = require("./experience-seeds");
 const interestData = require("./interest-seeds");
 const projectData = require("./project-seeds");
 const educationData = require("./education-seeds");
 const userData = require("./user-seeds");
+const technicalSkillData = require("./technicalSkill-seeds");
+const coreCompetencyData = require("./coreCompetency-seeds");
 
 
 
@@ -17,6 +27,8 @@ const seedAll = async () => {
     const seedInterests = () => Interest.bulkCreate(interestData);
     const seedEducation = () => Education.bulkCreate(educationData);
     const seedUsers = () => User.bulkCreate(userData);
+    const seedTechnicalSkills = () => TechnicalSkill.bulkCreate(technicalSkillData);
+    const seedCoreCompetencies = () => CoreCompetency.bulkCreate(coreCompetencyData);
 
     await connection.sync({ force: true });
     console.log("\n----- MySQL DB SYNCED -----\n");
@@ -28,6 +40,10 @@ const seedAll = async () => {
     console.log("\n----- Projects SEEDED -----\n");
     await seedEducation();
     console.log("\n----- Education SEEDED -----\n");
+    await seedTechnicalSkills();
+    console.log("\n----- Technical Skills SEEDED -----\n");
+    await seedCoreCompetencies();
+    console.log("\n----- Core Comptencies SEEDED -----\n");
     console.info('Seeding complete! 🌱');
     process.exit(0);
 
@@ -38,6 +54,8 @@ const seedAll = async () => {
     const seedInterests = () => Interest.collection.insertMany(interestData);
     const seedEducation = () => Education.collection.insertMany(educationData);
     const seedUsers = () => User.collection.insertMany(userData);
+    const seedTechnicalSkills = () => TechnicalSkill.collection.insertMany(technicalSkillData);
+    const seedCoreCompetencies = () => CoreCompetency.collection.insertMany(coreCompetencyData);
 
     connection.on('error', (err) => err);
     connection.once('open', async () => {
@@ -46,6 +64,8 @@ const seedAll = async () => {
       await Project.deleteMany({});
       await Interest.deleteMany({});
       await Education.deleteMany({});
+      await TechnicalSkill.deleteMany({});
+      await CoreCompetency.deleteMany({});
       console.log("\n----- Mongo DB CLEARED -----\n");
       await seedExperience();
       console.log("\n----- Experience SEEDED -----\n");
@@ -55,6 +75,10 @@ const seedAll = async () => {
       console.log("\n----- Projects SEEDED -----\n");
       await seedEducation();
       console.log("\n----- Education SEEDED -----\n");
+      await seedTechnicalSkills();
+      console.log("\n----- Technical Skills SEEDED -----\n");
+      await seedCoreCompetencies();
+      console.log("\n----- Core Comptencies SEEDED -----\n");
       console.info('Seeding complete! 🌱');
       process.exit(0);
     });
