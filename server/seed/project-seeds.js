@@ -4,8 +4,8 @@ const projectData = [
     category: "Commercial",
     type: "Condominiums",
     industry: "Construction",
-    size: "Highrise",
-    oversightAgency: "City",
+    scale: "Highrise",
+    oversight: "City",
     client: "TBD"
   },
   {
@@ -13,8 +13,8 @@ const projectData = [
     category: "Commercial",
     type: "Hotel",
     industry: "Construction",
-    size: "Highrise",
-    oversightAgency: "City",
+    scale: "Highrise",
+    oversight: "City",
     client: "TBD"
   },
   {
@@ -22,8 +22,8 @@ const projectData = [
     category: "Commercial",
     type: "Skilled Nursing Facility",
     industry: "Construction",
-    size: "Midrise",
-    oversightAgency: "OSHPD",
+    scale: "Midrise",
+    oversight: "OSHPD",
     client: "TBD"
   },
   {
@@ -31,8 +31,8 @@ const projectData = [
     category: "Commercial",
     type: "Office & Biolab",
     industry: "Construction",
-    size: "Highrise",
-    oversightAgency: "City",
+    scale: "Highrise",
+    oversight: "City",
     client: "TBD"
   },
   {
@@ -40,8 +40,8 @@ const projectData = [
     category: "Commercial",
     type: "Office & Biolab",
     industry: "Construction",
-    size: "Midrise",
-    oversightAgency: "City",
+    scale: "Midrise",
+    oversight: "City",
     client: "TBD"
   },
   {
@@ -49,8 +49,8 @@ const projectData = [
     category: "Commercial",
     type: "Hospital",
     industry: "Construction",
-    size: "Highrise",
-    oversightAgency: "OSHPD",
+    scale: "Highrise",
+    oversight: "OSHPD",
     client: "TBD"
   },
   {
@@ -58,8 +58,8 @@ const projectData = [
     category: "Commercial",
     type: "Hospital",
     industry: "Construction",
-    size: "Midrise",
-    oversightAgency: "OSHPD",
+    scale: "Midrise",
+    oversight: "OSHPD",
     client: "TBD"
   },
   {
@@ -67,8 +67,8 @@ const projectData = [
     category: "Commercial",
     type: "Medical Office Building",
     industry: "Construction",
-    size: "Midrise",
-    oversightAgency: "City",
+    scale: "Midrise",
+    oversight: "City",
     client: "TBD"
   },
   {
@@ -76,8 +76,8 @@ const projectData = [
     category: "Commercial",
     type: "School",
     industry: "Construction",
-    size: "Lowrise",
-    oversightAgency: "DSA",
+    scale: "Lowrise",
+    oversight: "DSA",
     client: "TBD"
   },
   {
@@ -85,8 +85,8 @@ const projectData = [
     category: "Commercial",
     type: "School",
     industry: "Construction",
-    size: "Midrise",
-    oversightAgency: "DSA",
+    scale: "Midrise",
+    oversight: "DSA",
     client: "TBD"
   },
   {
@@ -94,8 +94,8 @@ const projectData = [
     category: "Commercial",
     type: "School",
     industry: "Construction",
-    size: "Lowrise",
-    oversightAgency: "DSA",
+    scale: "Lowrise",
+    oversight: "DSA",
     client: "TBD"
   },
   {
@@ -103,8 +103,8 @@ const projectData = [
     category: "Commercial",
     type: "ATFP High Security Training Facility",
     industry: "Construction",
-    size: "Lowrise",
-    oversightAgency: "NAVFAC",
+    scale: "Lowrise",
+    oversight: "NAVFAC",
     client: "TBD"
   },
   {
@@ -112,8 +112,8 @@ const projectData = [
     category: "Commercial",
     type: "ATFP High Security Training Facility",
     industry: "Construction",
-    size: "Lowrise",
-    oversightAgency: "NAVFAC",
+    scale: "Lowrise",
+    oversight: "NAVFAC",
     client: "TBD"
   },
   {
@@ -121,8 +121,8 @@ const projectData = [
     category: "Commercial",
     type: "Office & Biolab",
     industry: "Construction",
-    size: "Midrise",
-    oversightAgency: "City",
+    scale: "Midrise",
+    oversight: "City",
     client: "TBD"
   },
   {
@@ -130,8 +130,8 @@ const projectData = [
     category: "Commercial",
     type: "Office & Biolab",
     industry: "Construction",
-    size: "Single Story",
-    oversightAgency: "City",
+    scale: "Single Story",
+    oversight: "City",
     client: "TBD"
   },
   {
@@ -139,8 +139,8 @@ const projectData = [
     category: "Commercial",
     type: "Office",
     industry: "Construction",
-    size: "Highrise Campus - 3 buildings",
-    oversightAgency: "City",
+    scale: "Highrise Campus - 3 buildings",
+    oversight: "City",
     client: "TBD"
   },
   {
@@ -148,8 +148,8 @@ const projectData = [
     category: "Commercial",
     type: "School",
     industry: "Construction",
-    size: "Lowrise Campus - 8 buildings",
-    oversightAgency: "DSA",
+    scale: "Lowrise Campus - 8 buildings",
+    oversight: "DSA",
     client: "TBD"
   },
   {
@@ -157,8 +157,8 @@ const projectData = [
     category: "Commercial",
     type: "School",
     industry: "Construction",
-    size: "Midrise",
-    oversightAgency: "DSA",
+    scale: "Midrise",
+    oversight: "DSA",
     client: "TBD"
   },
   {
@@ -166,8 +166,8 @@ const projectData = [
     category: "Commercial",
     type: "School",
     industry: "Construction",
-    size: "Midrise",
-    oversightAgency: "DSA",
+    scale: "Midrise",
+    oversight: "DSA",
     client: "TBD"
   },
 ];

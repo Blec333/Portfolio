@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
-import resumeDownload from "../img/LeClair-Resume.docx";
+import resumeDownload from "../assets/LeClair-Resume.docx";
 import save from "../img/floppy.png";
 
 function Header() {
