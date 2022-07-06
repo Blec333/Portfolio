@@ -107,9 +107,9 @@ userSchema.pre('save', async function (next) {
 userSchema.methods.isCorrectPassword = async function (password) {
   return bcrypt.compare(password, this.password);
 };
-userSchema.virtual('recommendationCount').get(function () {
-  return this.recommenations.length;
-});
+// userSchema.virtual('recommendationCount').get(function () {
+//   return this.recommendations.length;
+// });
 
 const User = model('User', userSchema);
 module.exports = User;

@@ -1,6 +1,6 @@
 import React from 'react';
 
-function HistoricalProject({ projectName, category, type, industry, scale, oversight, client }) {
+function HistoricalProjectBlock({ projectName, category, type, industry, scale, oversight, client }) {
   return (
     <tr className='hover:bg-base-300'>
       <td className="text-left p-4 border-collapse border border-slate-400">{projectName ? (projectName) : ("")}</td>
@@ -14,4 +14,4 @@ function HistoricalProject({ projectName, category, type, industry, scale, overs
   );
 }
 
-export default HistoricalProject;
+export default HistoricalProjectBlock;

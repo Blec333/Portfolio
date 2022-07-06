@@ -1,5 +1,5 @@
 import React from 'react';
-import Project from './Project';
+import ProjectBlock from './ProjectBlock';
 import pricingManagementImg from "../img/pricing-management.gif";
 import managementWorkbookImg from "../img/management-workbook.gif";
 import commonEngCalcsImg from "../img/common-engineering-calcs.gif";
@@ -10,31 +10,31 @@ export default function CarouselWorkbook() {
   return (
     <>
       <div className="carousel carousel-center p-4 space-x-4 bg-transparent rounded-box">
-        <Project
+        <ProjectBlock
           img={pricingManagementImg}
           title={'Pricing Management Workbook'}
           date={'2021'}
           desc={'Organize all of your vendor quotes with metric analysis and auto-generated cover pages.'}
         />
-        <Project
+        <ProjectBlock
           img={managementWorkbookImg}
           title={'Management Workbook'}
           date={'2021'}
           desc={'Keep track of HR and financials for company, division, departments and sub-departments.'}
         />
-        <Project
+        <ProjectBlock
           img={commonEngCalcsImg}
           title={'Common Engineering Calcs'}
           date={'2021'}
           desc={'Easily calculate the most common formulas for any project.'}
         />
-        <Project
+        <ProjectBlock
           img={budgetTemplateImg}
           title={'Budget Template'}
           date={'2021'}
           desc={'Organize your budget for any project to understand buyout margin and produce an accurate SOV.'}
         />
-        <Project
+        <ProjectBlock
           img={quotesoftImg}
           title={'Quotesoft Custom Template'}
           date={'2021'}

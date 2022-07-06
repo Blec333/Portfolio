@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Project({img, title, date, desc, repo, deploy, download}) {
+function ProjectBlock({img, title, date, desc, repo, deploy, download}) {
 
 
   return (
@@ -21,7 +21,6 @@ function Project({img, title, date, desc, repo, deploy, download}) {
     </div>
     </>
   );
-
 }
 
-export default Project;
+export default ProjectBlock;

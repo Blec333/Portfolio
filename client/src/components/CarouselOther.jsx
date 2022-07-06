@@ -1,12 +1,12 @@
 import React from 'react';
-import Project from './Project';
+import ProjectBlock from './ProjectBlock';
 import kevinSharkImg from "../img/kevin-shark.gif";
 
 export default function CarouselOther() {
   return (
     <>
       <div className="carousel carousel-center p-4 space-x-4 bg-transparent rounded-box">
-        <Project
+        <ProjectBlock
           img={kevinSharkImg}
           title={'Kevin Shark Attack'}
           date={'2022'}

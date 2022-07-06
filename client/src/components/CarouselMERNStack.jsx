@@ -1,5 +1,5 @@
 import React from 'react';
-import Project from './Project';
+import ProjectBlock from './ProjectBlock';
 import adventureQuestImg from "../img/AdventureQuest.gif";
 import pokerTableImg from "../img/poker-table.gif";
 import socialMediaApiImg from "../img/social-media-api.gif";
@@ -12,7 +12,7 @@ export default function CarouselMERNStack() {
   return (
     <>
     <div className="carousel carousel-center p-4 space-x-4 bg-transparent rounded-box">
-      <Project
+      <ProjectBlock
         img={adventureQuestImg}
         title={'Adventure Quest'}
         date={'Apr 2022'}
@@ -20,7 +20,7 @@ export default function CarouselMERNStack() {
         repo={'https://github.com/Blec333/adventureQuest'}
         deploy={'https://adventurequest.herokuapp.com/'}
       />
-        <Project
+        <ProjectBlock
           img={pokerTableImg}
           title={'Casino'}
           date={'Jun 2022'}
@@ -28,7 +28,7 @@ export default function CarouselMERNStack() {
           repo={'https://github.com/Blec333/cant-read-my-poker-face'}
           deploy={'https://ancient-bayou-45800.herokuapp.com/'}
         />
-        <Project
+        <ProjectBlock
           img={socialMediaApiImg}
           title={'Social Media API'}
           date={'May 2022'}
@@ -36,7 +36,7 @@ export default function CarouselMERNStack() {
           repo={'https://github.com/Blec333/social-media-api'}
           deploy={'https://blec-social-media-api.herokuapp.com/api/users/'}
         />
-        <Project
+        <ProjectBlock
           img={travelCenterImg}
           title={'The Travel Center'}
           date={'Apr 2022'}
@@ -44,7 +44,7 @@ export default function CarouselMERNStack() {
           repo={'https://github.com/Blec333/the-travel-center'}
           deploy={'https://Blec333.github.io/the-travel-center/'}
         />
-        <Project
+        <ProjectBlock
           img={jateImg}
           title={'JATE'}
           date={'May 2022'}
@@ -52,7 +52,7 @@ export default function CarouselMERNStack() {
           repo={'https://github.com/Blec333/pwa-text-editor'}
           deploy={'https://blec-jate.herokuapp.com/'}
         />
-        <Project
+        <ProjectBlock
           img={weatherDashboardImg}
           title={'Weather Dashboard'}
           date={'Apr 2022'}
@@ -60,7 +60,7 @@ export default function CarouselMERNStack() {
           repo={'https://github.com/Blec333/weather-dashboard'}
           deploy={'https://Blec333.github.io/weather-dashboard/'}
         />
-        <Project
+        <ProjectBlock
           img={schedulerImg}
           title={'Work Day Scheduler'}
           date={'Mar 2022'}

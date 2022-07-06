@@ -67,7 +67,7 @@ export default function Contact() {
   return (
     <>
     <br />
-      <div className="bg-transparent w-full justify-center text-center">
+      <div className="bg-transparent w-full justify-center text-center max-w-5xl">
         <figure>
           <div className="avatar">
             <div className="w-24 mask mask-squircle">

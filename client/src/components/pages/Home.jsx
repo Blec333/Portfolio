@@ -6,7 +6,7 @@ export default function Home() {
 
 
   return (
-    <div className="bg-transparent w-full justify-center text-center">
+    <div className="bg-transparent w-full justify-center text-center max-w-5xl">
       <br />
       <figure>
         <div className="avatar">

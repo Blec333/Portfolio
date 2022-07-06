@@ -1,8 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { useQuery } from "@apollo/client";
-import { QUERY_CORE_COMPETENCIES, QUERY_PROJECTS, QUERY_TECHNICAL_SKILLS } from "../../utils/queries";
+import {
+  QUERY_CORE_COMPETENCIES,
+  QUERY_EDUCATIONS,
+  QUERY_PROJECTS,
+  QUERY_TECHNICAL_SKILLS
+} from "../../utils/queries";
 
-import HistoricalProject from '../HistoricalProject';
+import HistoricalProjectBlock from '../HistoricalProjectBlock';
+import EducationBlock from '../EducationBlock';
 
 import spinner from '../../assets/spinner.gif';
 import profilePic from "../../img/Profile-Picture.png";
@@ -14,11 +20,13 @@ export default function Resume() {
   const [technicalSkills, setTechnicalSkills] = useState('');
   const [coreCompetencies, setCoreCompetencies] = useState('');
   const [projects, setProjects] = useState([]);
+  const [education, setEducation] = useState([]);
 
 
   const technicalSkillsData = useQuery(QUERY_TECHNICAL_SKILLS);
   const coreCompetencyData = useQuery(QUERY_CORE_COMPETENCIES);
   const historicalProjectData = useQuery(QUERY_PROJECTS);
+  const educationData = useQuery(QUERY_EDUCATIONS);
 
 
   useEffect(() => {
@@ -47,7 +55,10 @@ export default function Resume() {
     if (!historicalProjectData.loading) {
       setProjects(historicalProjectData.data.projects);
     }
-  }, [technicalSkillsData, coreCompetencyData, historicalProjectData]);
+    if (!educationData.loading) {
+      setEducation(educationData.data.educations);
+    }
+  }, [technicalSkillsData, coreCompetencyData, historicalProjectData, educationData]);
 
 
   if (technicalSkillsData.loading) {
@@ -68,13 +79,18 @@ export default function Resume() {
     return <p>{`Error: ${historicalProjectData.error.message}`}</p>
   }
 
+  if (educationData.loading) {
+    return <img src={spinner} alt="loading" />
+  } else if (educationData.error) {
+    return <p>{`Error: ${educationData.error.message}`}</p>
+  }
 
 
 
 
   return (
     <>
-      <div className="bg-transparent justify-center text-center">
+      <div className="bg-transparent justify-center text-center max-w-5xl">
         <br />
         <figure>
           <div className="avatar">
@@ -90,21 +106,25 @@ export default function Resume() {
           </div>
         </div>
         <div className="bg-transparent text-center">
-          <br />
-          <h1 className="text-3xl text-bold underline text-primary-content text-center p-4">Technical Skills</h1>
-          <br />
+          <h1 className="text-3xl text-bold underline text-primary-content text-center py-8">TECHNICAL SKILLS</h1>
           <div className="text-primary-content text-center">{technicalSkills}</div>
-          <br />
-          <br />
-          <h1 className="text-3xl text-bold underline text-primary-content text-center p-4">Core Competencies</h1>
-          <br />
+          <h1 className="text-3xl text-bold underline text-primary-content text-center py-8">CORE COMPETENCIES</h1>
           <div className="text-primary-content text-center">{coreCompetencies}</div>
         </div>
-
-        <br />
-        <h2 className="text-3xl text-bold underline text-primary-content text-center p-4">Projects</h2>
+        <h2 className="text-3xl text-bold underline text-primary-content text-center py-8">EDUCATION</h2>
+        <div className="carousel carousel-center py-8 space-x-4 bg-transparent rounded-box">
+              {education.map(edu => (
+                <EducationBlock
+                  focus={edu.focus}
+                  school={edu.school}
+                  dates={edu.dates}
+                  location={edu.location}
+                  program={edu.program}
+                />
+              ))}
+        </div>
+        <h2 className="text-3xl text-bold underline text-primary-content text-center py-8">PROJECTS</h2>
         <div className="flex overflow-x-auto bg-transparent text-center justify-center">
-
           <table className="table-auto text-primary-content text-center">
             <thead>
               <tr>
@@ -119,7 +139,7 @@ export default function Resume() {
             </thead>
             <tbody>
               {projects.map(project => (
-                <HistoricalProject
+                <HistoricalProjectBlock
                   projectName={project.projectName}
                   category={project.category}
                   type={project.type}
