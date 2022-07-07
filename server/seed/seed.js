@@ -67,6 +67,8 @@ const seedAll = async () => {
       await TechnicalSkill.deleteMany({});
       await CoreCompetency.deleteMany({});
       console.log("\n----- Mongo DB CLEARED -----\n");
+      await seedUsers();
+      console.log("\n----- Users SEEDED -----\n");
       await seedExperience();
       console.log("\n----- Experience SEEDED -----\n");
       await seedInterests();

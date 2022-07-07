@@ -6,7 +6,7 @@ const projectData = [
     industry: "Construction",
     scale: "Highrise",
     oversight: "City",
-    client: "TBD"
+    client: " "
   },
   {
     projectName: "Lane Field South",
@@ -15,7 +15,7 @@ const projectData = [
     industry: "Construction",
     scale: "Highrise",
     oversight: "City",
-    client: "TBD"
+    client: " "
   },
   {
     projectName: "Casa De Las Campanas",
@@ -24,7 +24,7 @@ const projectData = [
     industry: "Construction",
     scale: "Midrise",
     oversight: "OSHPD",
-    client: "TBD"
+    client: " "
   },
   {
     projectName: "Legacy International Center",
@@ -33,7 +33,7 @@ const projectData = [
     industry: "Construction",
     scale: "Highrise",
     oversight: "City",
-    client: "TBD"
+    client: " "
   },
   {
     projectName: "Lilly Labs",
@@ -42,7 +42,7 @@ const projectData = [
     industry: "Construction",
     scale: "Midrise",
     oversight: "City",
-    client: "TBD"
+    client: " "
   },
   {
     projectName: "Kaiser Riverside",
@@ -51,7 +51,7 @@ const projectData = [
     industry: "Construction",
     scale: "Highrise",
     oversight: "OSHPD",
-    client: "TBD"
+    client: " "
   },
   {
     projectName: "Scripps Cardiovascular Institute",
@@ -60,7 +60,7 @@ const projectData = [
     industry: "Construction",
     scale: "Midrise",
     oversight: "OSHPD",
-    client: "TBD"
+    client: " "
   },
   {
     projectName: "Sharp RB MOB",
@@ -69,7 +69,7 @@ const projectData = [
     industry: "Construction",
     scale: "Midrise",
     oversight: "City",
-    client: "TBD"
+    client: " "
   },
   {
     projectName: "SDCCD Mesa College Fine Arts",
@@ -78,7 +78,7 @@ const projectData = [
     industry: "Construction",
     scale: "Lowrise",
     oversight: "DSA",
-    client: "TBD"
+    client: " "
   },
   {
     projectName: "Wilson Middle School",
@@ -87,7 +87,7 @@ const projectData = [
     industry: "Construction",
     scale: "Midrise",
     oversight: "DSA",
-    client: "TBD"
+    client: " "
   },
   {
     projectName: "Central Elemntary School",
@@ -96,7 +96,7 @@ const projectData = [
     industry: "Construction",
     scale: "Lowrise",
     oversight: "DSA",
-    client: "TBD"
+    client: " "
   },
   {
     projectName: "Seal Teams 1 & 3 P892 & P964",
@@ -105,7 +105,7 @@ const projectData = [
     industry: "Construction",
     scale: "Lowrise",
     oversight: "NAVFAC",
-    client: "TBD"
+    client: " "
   },
   {
     projectName: "P921, P988, P949 & P950",
@@ -114,7 +114,7 @@ const projectData = [
     industry: "Construction",
     scale: "Lowrise",
     oversight: "NAVFAC",
-    client: "TBD"
+    client: " "
   },
   {
     projectName: "Cray Ct.",
@@ -123,7 +123,7 @@ const projectData = [
     industry: "Construction",
     scale: "Midrise",
     oversight: "City",
-    client: "TBD"
+    client: " "
   },
   {
     projectName: "Oberlin Dr.",
@@ -132,7 +132,7 @@ const projectData = [
     industry: "Construction",
     scale: "Single Story",
     oversight: "City",
-    client: "TBD"
+    client: " "
   },
   {
     projectName: "Boardwalk HCP",
@@ -141,7 +141,7 @@ const projectData = [
     industry: "Construction",
     scale: "Highrise Campus - 3 buildings",
     oversight: "City",
-    client: "TBD"
+    client: " "
   },
   {
     projectName: "Central Elementary",
@@ -150,7 +150,7 @@ const projectData = [
     industry: "Construction",
     scale: "Lowrise Campus - 8 buildings",
     oversight: "DSA",
-    client: "TBD"
+    client: " "
   },
   {
     projectName: "Torrey Pines HS Innovation",
@@ -159,7 +159,7 @@ const projectData = [
     industry: "Construction",
     scale: "Midrise",
     oversight: "DSA",
-    client: "TBD"
+    client: " "
   },
   {
     projectName: "Sharp Innovation Education Center",
@@ -168,7 +168,7 @@ const projectData = [
     industry: "Construction",
     scale: "Midrise",
     oversight: "DSA",
-    client: "TBD"
+    client: " "
   },
 ];
 

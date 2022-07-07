@@ -4,15 +4,19 @@ import {
   QUERY_CORE_COMPETENCIES,
   QUERY_EDUCATIONS,
   QUERY_PROJECTS,
-  QUERY_TECHNICAL_SKILLS
+  QUERY_TECHNICAL_SKILLS,
+  QUERY_EXPERIENCES
 } from "../../utils/queries";
 
 import HistoricalProjectBlock from '../HistoricalProjectBlock';
 import EducationBlock from '../EducationBlock';
+import ExperienceBlock from '../ExperienceBlock';
 
 import spinner from '../../assets/spinner.gif';
 import profilePic from "../../img/Profile-Picture.png";
 import resumeDownload from "../../assets/LeClair-Resume.docx";
+
+
 
 export default function Resume() {
 
@@ -21,12 +25,14 @@ export default function Resume() {
   const [coreCompetencies, setCoreCompetencies] = useState('');
   const [projects, setProjects] = useState([]);
   const [education, setEducation] = useState([]);
+  const [experiences, setExperiences] = useState([]);
 
 
   const technicalSkillsData = useQuery(QUERY_TECHNICAL_SKILLS);
   const coreCompetencyData = useQuery(QUERY_CORE_COMPETENCIES);
   const historicalProjectData = useQuery(QUERY_PROJECTS);
   const educationData = useQuery(QUERY_EDUCATIONS);
+  const experienceData = useQuery(QUERY_EXPERIENCES);
 
 
   useEffect(() => {
@@ -58,7 +64,10 @@ export default function Resume() {
     if (!educationData.loading) {
       setEducation(educationData.data.educations);
     }
-  }, [technicalSkillsData, coreCompetencyData, historicalProjectData, educationData]);
+    if (!experienceData.loading) {
+      setExperiences(experienceData.data.experiences);
+    }
+  }, [technicalSkillsData, coreCompetencyData, historicalProjectData, educationData, experienceData]);
 
 
   if (technicalSkillsData.loading) {
@@ -83,6 +92,12 @@ export default function Resume() {
     return <img src={spinner} alt="loading" />
   } else if (educationData.error) {
     return <p>{`Error: ${educationData.error.message}`}</p>
+  }
+
+  if (experienceData.loading) {
+    return <img src={spinner} alt="loading" />
+  } else if (experienceData.error) {
+    return <p>{`Error: ${experienceData.error.message}`}</p>
   }
 
 
@@ -113,16 +128,40 @@ export default function Resume() {
         </div>
         <h2 className="text-3xl text-bold underline text-primary-content text-center py-8">EDUCATION</h2>
         <div className="carousel carousel-center py-8 space-x-4 bg-transparent rounded-box">
-              {education.map(edu => (
-                <EducationBlock
-                  focus={edu.focus}
-                  school={edu.school}
-                  dates={edu.dates}
-                  location={edu.location}
-                  program={edu.program}
+          {education.map(edu => (
+            <EducationBlock
+              focus={edu.focus}
+              school={edu.school}
+              dates={edu.dates}
+              location={edu.location}
+              program={edu.program}
+            />
+          ))}
+        </div>
+        <h2 className="text-3xl text-bold underline text-neutral-content text-center py-8">EXPERIENCE</h2>
+              {experiences.map(experience => (
+                <ExperienceBlock
+                  company={experience.company}
+                  location={experience.location}
+                  title={experience.title}
+                  dateRange={experience.dateRange}
+                  description1={experience.description1}
+                  description2={experience.description2}
+                  description3={experience.description3}
+                  description4={experience.description4}
+                  description5={experience.description5}
+                  description6={experience.description6}
+                  description7={experience.description7}
+                  description8={experience.description8}
+                  description9={experience.description9}
+                  description10={experience.description10}
+                  description11={experience.description11}
+                  description12={experience.description12}
+                  description13={experience.description13}
+                  description14={experience.description14}
+                  description15={experience.description15}
                 />
               ))}
-        </div>
         <h2 className="text-3xl text-bold underline text-primary-content text-center py-8">PROJECTS</h2>
         <div className="flex overflow-x-auto bg-transparent text-center justify-center">
           <table className="table-auto text-primary-content text-center">

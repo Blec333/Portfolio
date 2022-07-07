@@ -1,6 +1,4 @@
-// 🔑 The library that we use to decode the token's expiration time is jwt-decode.
-// We see that the library has been successfully imported:
-import decode from "jwt-decode";
+import decode from 'jwt-decode';
 
 class AuthService {
   getProfile() {
@@ -8,40 +6,40 @@ class AuthService {
   }
 
   loggedIn() {
+    // Checks if there is a saved token and it's still valid
     const token = this.getToken();
-    // If there is a token and it's not expired, return `true`
-    return token && !this.isTokenExpired(token) ? true : false;
+    return !!token && !this.isTokenExpired(token);
   }
-  // Once a valid comparison is made, the user will be prevented from immediately logging out.
+
   isTokenExpired(token) {
-    // Decode the token to get its expiration time that was set by the server
-    // 🔑 We also need to apply the jwt library's decode() method to our token.
-    // It looks like the expiration time, as set by the server, is being retrieved and stored in a variable decoded:
-    const decoded = decode(token);
-    // If the expiration time is less than the current time (in seconds), the token is expired and we return `true`
-    // 🔑 Next, we look at the code used to compare the expiration date to the current time. For the comparison to work, the time units we use must be the same.
-    // Because decoded.exp is in seconds and the Date.now() method returns a value in milliseconds, we divide the value that Date.now() returns by 1000.
-    // Then a valid comparison can be made:
-    if (decoded.exp < Date.now() / 1000) {
-      localStorage.removeItem("id_token");
-      return true;
+    try {
+      const decoded = decode(token);
+      if (decoded.exp < Date.now() / 1000) {
+        return true;
+      } else return false;
+    } catch (err) {
+      return false;
     }
-    // If token hasn't passed its expiration time, return `false`
-    return false;
   }
 
   getToken() {
-    return localStorage.getItem("id_token");
+    // Retrieves the user token from localStorage
+    return localStorage.getItem('id_token');
   }
 
   login(idToken) {
-    localStorage.setItem("id_token", idToken);
-    window.location.assign("/");
+    console.log('login path hit: writing to local storage')
+    // Saves user token to localStorage
+    localStorage.setItem('id_token', idToken);
+
+    window.location.assign('/');
   }
 
   logout() {
-    localStorage.removeItem("id_token");
-    window.location.reload();
+    // Clear user token and profile data from localStorage
+    localStorage.removeItem('id_token');
+    // this will reload the page and reset the state of the application
+    window.location.assign('/');
   }
 }
 

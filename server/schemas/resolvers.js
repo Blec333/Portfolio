@@ -63,28 +63,35 @@ const resolvers = {
   },
 
   // 🔑 We call the signToken() function in the resolvers where we want to transmit data securely to generate a signed token:
-  // Mutation: {
-    // login: async (parent, { username, email, password }) => {
-    //   const user = await User.findOne({ email: email });
-    //   if (!user) {
-    //     throw new AuthenticationError("No user with this email found!");
-    //   }
-    //   const correctPw = await player.isCorrectPassword(password);
-    //   if (!correctPw) {
-    //     throw new AuthenticationError("Incorrect password!");
-    //   }
-    //   const token = signToken(user);
-    //   return { token, user };
-    // },
-    // addUser: async (parent, { username, email, password }) => {
-    //   const user = await User.create({ username, email, password });
-    //   const token = signToken(user);
-    //   console.log({ token, user });
-    //   return { token, user };
-    // },
-    // removeUser: async (parent, { userId }) => {
-    //   return User.findOneAndDelete({ _id: userId });
-    // },
+  Mutation: {
+    addUser: async (parent, args) => {
+      const user = await User.create(args);
+      const token = signToken(user);
+      return { token, user };
+    },
+    login: async (parent, { username, password }) => {
+      const user = await User.findOne({ username });
+      if (!user) {
+        throw new AuthenticationError("No user with this email found!");
+      }
+      const correctPw = await user.isCorrectPassword(password);
+      if (!correctPw) {
+        throw new AuthenticationError("Incorrect password!");
+      }
+      const token = signToken(user);
+      return { token, user };
+    },
+    removeUser: async (parent, { userId }) => {
+      return User.findOneAndDelete({ _id: userId });
+    },
+    updateUser: async (parent, args, context) => {
+        if (context.user) {
+          return await User.findByIdAndUpdate(context.user._id, args, { new: true });
+        }
+
+        throw new AuthenticationError('Not logged in');
+    },
+  },
 
     // addProject: async (parent, { projectName, category, type, industry, scale, oversight, client }) => {
     //   try {
@@ -109,11 +116,11 @@ const resolvers = {
     //   return Project.findOneAndDelete({ _id: projectId });
     // },
 
-    // addUserToProject: async (parent, { gameId, playerId }) => {
+    // addUserToProject: async (parent, { gameId, userId }) => {
     //   return await Project.findOneAndUpdate(
     //     { _id: gameId },
     //     {
-    //       $addToSet: { players: playerId },
+    //       $addToSet: { users: userId },
     //     },
     //     {
     //       new: true,
@@ -121,38 +128,17 @@ const resolvers = {
     //     }
     //   );
     // },
-    // updateUser: async (parent, args, context) => {
-
-    //   try {
-    //     if (context.user._id) {
-    //       return await User.findOneAndUpdate(
-    //         context.user._id, args,
-    //         { new: true }
-    //       );
-    //     } else {
-    //       console.log(args)
-    //     }
-
-    //   } catch (err) {
-    //     console.log("user");
-    //     console.log(context.user.id)
-    //     console.log("args")
-    //     console.log(args)
-
-    //     console.log(err)
-    //   }
-    // },
-    // removeUserFromProject: async (parent, { gameId, playerId }) => {
+    // removeUserFromProject: async (parent, { gameId, userId }) => {
     //   return Project.findOneAndUpdate(
     //     { _id: userId },
-    //     { $pull: { players: playerId } },
+    //     { $pull: { users: userId } },
     //     { new: true }
     //   );
     // },
 
-    // addProjectToUser: async (parent, { playerId, gameId }) => {
+    // addProjectToUser: async (parent, { userId, gameId }) => {
     //   return await User.findOneAndUpdate(
-    //     { _id: playerId },
+    //     { _id: userId },
     //     {
     //       $addToSet: { games: gameId },
     //     },
@@ -162,14 +148,13 @@ const resolvers = {
     //     }
     //   );
     // },
-    // removeProjectFromUser: async (parent, { playerId, gameId }) => {
+    // removeProjectFromUser: async (parent, { userId, gameId }) => {
     //   return User.findOneAndUpdate(
-    //     { _id: playerId },
+    //     { _id: userId },
     //     { $pull: { games: gameId } },
     //     { new: true }
     //   );
     // },
-  // },
 };
 
 module.exports = resolvers;

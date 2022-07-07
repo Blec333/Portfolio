@@ -2,7 +2,7 @@ const experienceData = [
   {
     company: "Associate Mechanical Contractors",
     title: "Project/Preconstruction Manager",
-    dateRange: "Jun 2020 – Feb 2022",
+    dateRange: "Jun 2020 - Feb 2022",
     location: "San Diego, CA",
     description1: "Direct preconstruction activities, budget estimates, and staffing requirements in accordance with the defined project scoping and scheduling; prepare periodic status reports to communicate project scopes and ensure project safety.",
     description2: "Manage estimating, engineering, and preconstruction activities for increased operations efficiency, facilitating supported business development objectives by satisfying key metric across the company.",
@@ -23,7 +23,7 @@ const experienceData = [
   {
     company: "A.O REED & CO.",
     title: "BIM/VDC Database Manager/Mechanical CAD Detailer",
-    dateRange: "Dec 2014 – Nov 2019",
+    dateRange: "Dec 2014 - Nov 2019",
     location: "San Diego, CA",
     description1: "Produced detailed constructible shop drawings based on contract documents, design criteria, and instructions using sensible and strategic practices to maximize productivity throughout all phases of the construction process.",
     description2: "Interacted with clients to understand their specific BIM/VDC requirements to ensure smooth BIM workflows throughout the entire project duration, from contract-award stage to final handover of BIM deliverables.",
@@ -43,8 +43,8 @@ const experienceData = [
   },
   {
     company: "Elfin Forest/Harmony Grove Fire Department ",
-    title: "Firefighter/EMT ",
-    dateRange: "Jan 2008 – Dec 2013 ",
+    title: "Driver/Operator-Firefighter/EMT ",
+    dateRange: "Jan 2008 - Dec 2013 ",
     location: "Escondido, CA",
     description1: "Maintained current level of emergency medication and firefighting knowledge to mediate on community emergency calls.",
     description2: "Utilized experience and technical knowledge effectively, allowing for enhanced crew capabilities, fire protection, preparedness, planning, organization, diverse background experience, and critical ingenuity metrics.",

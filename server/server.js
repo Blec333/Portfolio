@@ -1,24 +1,25 @@
-const path = require("path");
-// const routes = require('./routes');
-const express = require("express");
-const { database, connection } = require("./config/connection");
-const PORT = process.env.PORT || 3001;
-const app = express();
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
-if (process.env.NODE_ENV === 'production') {
-  app.use(express.static(path.join(__dirname, '../client/build')));
-}
-app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "../client/build/index.html"));
-});
-// app.use(routes);
 
+
+  const { database } = require("./config/connection");
 
 if (database === "MySQL ") {
-
   const session = require("express-session");
+  const path = require("path");
+  const { connection } = require("./config/connection");
   // const routes = require("./controllers");
+  // const routes = require('./routes');
+  const express = require("express");
+  const PORT = process.env.PORT || 3001;
+  const app = express();
+  app.use(express.json());
+  app.use(express.urlencoded({ extended: true }));
+  if (process.env.NODE_ENV === 'production') {
+    app.use(express.static(path.join(__dirname, '../client/build')));
+  }
+  app.get("/", (req, res) => {
+    res.sendFile(path.join(__dirname, "../client/build/index.html"));
+  });
+  // app.use(routes);
   const SequelizeStore = require("connect-session-sequelize")(session.Store);
   const sess = {
     secret: "SuperDuper Secreter Secret Secret",
@@ -39,19 +40,39 @@ if (database === "MySQL ") {
 } else if (database === "MongoDB") {
 
 
-const { authMiddleware } = require("./utils/auth");
-const { ApolloServer } = require("apollo-server-express");
-const { typeDefs, resolvers } = require("./schemas");
-const cwd = process.cwd();
-
+  const express = require("express");
+  const { ApolloServer } = require("apollo-server-express");
+  const path = require("path");
+  const { authMiddleware } = require("./utils/auth");
+  const { typeDefs, resolvers } = require("./schemas");
+  const { connection } = require("./config/connection");
+  // const routes = require('./routes');
+  const PORT = process.env.PORT || 3001;
+  const app = express();
   //ADD APOLLO SERVER------------------------
   const server = new ApolloServer({
     typeDefs,
     resolvers,
-    // context: authMiddleware,
+    context: authMiddleware,
   });
   //----------------------------------------
 
+
+  app.use(express.urlencoded({ extended: false }));
+  app.use(express.json());
+
+  app.use('/img', express.static(path.join(__dirname, '../client/img')));
+
+  if (process.env.NODE_ENV === 'production') {
+    app.use(express.static(path.join(__dirname, '../client/build')));
+  }
+  app.get("/", (req, res) => {
+    res.sendFile(path.join(__dirname, "../client/build/index.html"));
+  });
+
+  // app.use(routes);
+
+  const cwd = process.cwd();
   const activity = cwd.includes("01-Activities")
     ? cwd.split("/01-Activities/")[1]
     : cwd;

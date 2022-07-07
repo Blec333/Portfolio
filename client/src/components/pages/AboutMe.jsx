@@ -1,7 +1,34 @@
-import React from 'react';
+
+import React, { useEffect, useState } from 'react';
+import { useQuery } from "@apollo/client";
+import { QUERY_INTERESTS } from "../../utils/queries";
+
+import InterestBlock from '../InterestBlock';
+
 import profilePic from "../../img/Profile-Picture.png";
+import spinner from '../../assets/spinner.gif';
+
+
 
 export default function AboutMe() {
+
+
+  const [interests, setInterests] = useState([]);
+  const interestsData = useQuery(QUERY_INTERESTS);
+
+  useEffect(() => {
+    if (!interestsData.loading) {
+      setInterests(interestsData.data.interests);
+    }
+  }, [interestsData]);
+
+  if (interestsData.loading) {
+    return <img src={spinner} alt="loading" />
+  } else if (interestsData.error) {
+    return <p>{`Error: ${interestsData.error.message}`}</p>
+  }
+
+
   return (
     <>
       <div className="bg-transparent w-full justify-center text-center max-w-5xl">
@@ -29,26 +56,22 @@ export default function AboutMe() {
           <div className="text-primary-content text-center">Proficient and resourceful Software Developer, Project Manager and Preconstruction Manager with 8+ years of extensive industry experience providing cutting-edge solutions in the design, engineering, and construction sectors. Analytical and practical-minded, adept at identifying opportunities for improvement, implementing changes, and measuring the impact of those changes. Exceptionally competent management specialist equipped with unmatched competencies in project plan implementation and mechanical design management. Exemplified integrity, accountability, and solid work ethic with an excellent grasp of project management methodologies to nurture productive collaborations and achieve optimal results. A focused leader in adopting new tools and techniques that improve data management and boost inter-departmental collaboration.
           </div>
         </div>
-        <br />
-        <br />
+        <h2 className="text-xl text-bold underline text-primary-content text-center py-8">PERSONAL INTERESTS</h2>
         <div className="flex overflow-x-auto bg-transparent text-center justify-center">
           <table className="table-auto text-primary-content text-center">
             <thead>
-              <th className="text-center p-4">Personal Interests</th>
+              <tr>
+                <th className="text-center">Interest</th>
+                <th className="text-center">Category</th>
+              </tr>
             </thead>
             <tbody>
-              <td className="flex flex-col items-start text-left p-4 border-collapse border border-slate-400">
-                <tr className='hover:bg-base-300'>* Spending time with my wife & boys!</tr>
-                <tr className='hover:bg-base-300'>* Building applications</tr>
-                <tr className='hover:bg-base-300'>* Construction</tr>
-                <tr className='hover:bg-base-300'>* Engineering</tr>
-                <tr className='hover:bg-base-300'>* Trade Craft</tr>
-                <tr className='hover:bg-base-300'>* Biking</tr>
-                <tr className='hover:bg-base-300'>* Swimming - Pool (not ocean)</tr>
-                <tr className='hover:bg-base-300'>* Reading about emerging technologies</tr>
-                <tr className='hover:bg-base-300'>* Pondering the mysteries of the universe</tr>
-                <tr className='hover:bg-base-300'>* Wine & Craft Beer</tr>
-              </td>
+              {interests.map(interest => (
+                <InterestBlock
+                  interest={interest.interest}
+                  category={interest.category}
+                />
+                ))}
             </tbody>
           </table>
         </div>

@@ -1,7 +1,7 @@
 const database = "MongoDB"// either "MongoDB" or "MySQL"
 
 
-if (database === "MySQL ") {
+if (database === "MySQL") {
 
   const Sequelize = require("sequelize");
   require("dotenv").config();
@@ -39,3 +39,4 @@ if (database === "MySQL ") {
 
   module.exports = { database, connection };
 }
+
