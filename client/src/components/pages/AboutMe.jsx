@@ -53,29 +53,35 @@ export default function AboutMe() {
           </div>
         </div>
         <div className="bg-transparent text-center">
-          <div className="text-primary-content text-center">Proficient and resourceful Software Developer, Project Manager and Preconstruction Manager with 8+ years of extensive industry experience providing cutting-edge solutions in the design, engineering, and construction sectors. Analytical and practical-minded, adept at identifying opportunities for improvement, implementing changes, and measuring the impact of those changes. Exceptionally competent management specialist equipped with unmatched competencies in project plan implementation and mechanical design management. Exemplified integrity, accountability, and solid work ethic with an excellent grasp of project management methodologies to nurture productive collaborations and achieve optimal results. A focused leader in adopting new tools and techniques that improve data management and boost inter-departmental collaboration.
+          <div className="text-primary-content text-center p-3 m-3">As an accomplished professional with 8+ years of industry experience, I understand the importance of delivering technology-driven solutions. My experience has proven that developing custom software solutions to accomplish project objectives is a key contributing factor to the success of any project.
           </div>
+          <div className="text-primary-content text-center p-3 m-3">
+          My talents with VBA, Lisp, C#.NET, and Dynamo have contributed greatly to operational efficiency and productivity in previous roles. In addition, my technological skills extend to the development of responsive software such as web applications within the MERN stack which can be found via my portfolio (linked below). I am adept in interpersonal communication and a consistent collaborator in implementing technological innovations for process improvement. Examples include the development of new tools to manage workflow and financial information with data analysis summaries.
         </div>
-        <h2 className="text-xl text-bold underline text-primary-content text-center py-8">PERSONAL INTERESTS</h2>
-        <div className="flex overflow-x-auto bg-transparent text-center justify-center">
-          <table className="table-auto text-primary-content text-center">
-            <thead>
-              <tr>
-                <th className="text-center">Interest</th>
-                <th className="text-center">Category</th>
-              </tr>
-            </thead>
-            <tbody>
-              {interests.map(interest => (
-                <InterestBlock
-                  interest={interest.interest}
-                  category={interest.category}
-                />
-                ))}
-            </tbody>
-          </table>
+        <div className="text-primary-content text-center p-3 m-3">
+          My past experience has enabled me to expand and acquire expertise in developing budget estimates, determining staff requirements, project scoping, and scheduling. I have also demonstrated expertise in systems optimizations throughout my career. Focusing on improved communication and collaborative synergy, I introduced SharePoint architecture, organized tiered Sharepoint permission protocols, configured Microsoft Teams, and assisted in managing Active Directory. Moreover, I created comprehensive workbooks, schedules, and templates, which standardized the optimal project workflow for estimating and operations.
         </div>
       </div>
+      <h2 className="text-xl text-bold underline text-primary-content text-center py-8">PERSONAL INTERESTS</h2>
+      <div className="flex overflow-x-auto bg-transparent text-center justify-center">
+        <table className="table-auto text-primary-content text-center">
+          <thead>
+            <tr>
+              <th className="text-center">Interest</th>
+              <th className="text-center">Category</th>
+            </tr>
+          </thead>
+          <tbody>
+            {interests.map(interest => (
+              <InterestBlock
+                interest={interest.interest}
+                category={interest.category}
+              />
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
     </>
   );
 }
