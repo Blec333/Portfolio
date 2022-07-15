@@ -1,6 +1,7 @@
 
 
-  const { database } = require("./config/connection");
+  const { writeFileSync } = require("fs");
+const { database } = require("./config/connection");
 
 if (database === "MySQL ") {
   const session = require("express-session");
@@ -67,6 +68,9 @@ if (database === "MySQL ") {
     app.use(express.static(path.join(__dirname, '../client/build')));
   }
   app.get("/", (req, res) => {
+    // const count = readFileSync('./utils/count.txt', 'utf-8');
+    // const newCount = parseInt(count) + 1
+    // writeFileSync('./utils/count.txt', newCount)
     res.sendFile(path.join(__dirname, "../client/build/index.html"));
   });
 

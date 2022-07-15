@@ -40,7 +40,6 @@ const client = new ApolloClient({
   link: authLink.concat(httpLink),
   cache: new InMemoryCache(),
 });
-console.log(client)
 
 function App() {
   return (
@@ -48,7 +47,7 @@ function App() {
       <Router>
         <div className="flex flex-col h-screen">
           <Header/>
-          <div className="grid flex-1 overflow-y-auto h-screen place-items-center">
+          <div className="grid flex-1 overflow-y-auto h-screen w-screen place-items-center">
             <Routes>
               <Route path="/" element={<Home/>}/>
               <Route path="/account" element={<Account/>}/>

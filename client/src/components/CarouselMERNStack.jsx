@@ -1,5 +1,6 @@
 import React from 'react';
 import ProjectBlock from './ProjectBlock';
+import portfolioImg from "../img/portfolio.jpg";
 import adventureQuestImg from "../img/AdventureQuest.gif";
 import pokerTableImg from "../img/poker-table.gif";
 import socialMediaApiImg from "../img/social-media-api.gif";
@@ -11,22 +12,30 @@ import schedulerImg from "../img/Work Day Scheduler.gif";
 export default function CarouselMERNStack() {
   return (
     <>
-    <div className="carousel carousel-center p-4 space-x-4 bg-transparent rounded-box">
-      <ProjectBlock
-        img={adventureQuestImg}
-        title={'Adventure Quest'}
-        date={'Apr 2022'}
-        desc={'Collab: Create an adventurer, choose your opponent wisely and watch the battle unfold'}
-        repo={'https://github.com/Blec333/adventureQuest'}
-        deploy={'https://adventurequest.herokuapp.com/'}
-      />
+      <div className="carousel carousel-center p-4 space-x-4 bg-transparent rounded-box">
+        <ProjectBlock
+          img={portfolioImg}
+          title={'Portfolio'}
+          date={'Jul 2022'}
+          desc={'This is a fullstack application, peruse at your leisure.'}
+          repo={'https://github.com/Blec333/portfolio'}
+          deploy={'https://brennan-leclair.herokuapp.com/'}
+        />
+        <ProjectBlock
+          img={adventureQuestImg}
+          title={'Adventure Quest'}
+          date={'Apr 2022'}
+          desc={'Collab: Create an adventurer, choose your opponent wisely and watch the battle unfold'}
+          repo={'https://github.com/Blec333/adventureQuest'}
+          deploy={'https://adventurequest.herokuapp.com/'}
+        />
         <ProjectBlock
           img={pokerTableImg}
           title={'Casino'}
           date={'Jun 2022'}
           desc={'Collab: Enter the casino, take a seat at the poker table and enjoy the game'}
           repo={'https://github.com/Blec333/cant-read-my-poker-face'}
-          deploy={'https://ancient-bayou-45800.herokuapp.com/'}
+          deploy={'https://blec-casino.herokuapp.com/'}
         />
         <ProjectBlock
           img={socialMediaApiImg}
