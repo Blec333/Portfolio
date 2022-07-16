@@ -26,7 +26,7 @@ export default function Home() {
         </div>
       </div>
       <div className="bg-transparent text-center">
-        <div className="text-primary-content text-center">Welcome to my portfolio!  This site is an example of a MERN fullstack application backed by MongoDB.  I'm currently open to full-time and contract opportunities in software development including MERN sack, VBA, Lisp, C#.NET, and Dynamo.  You will find a download link to my resume available in the header as well as on the resume page. If you wish to contact me you may reach out from the contact me page.
+        <div className="text-primary-content text-center">Welcome to my portfolio!  This site is an example of a MERN fullstack application backed by MongoDB.  I'm currently open to full-time and contract opportunities in software development including MERN stack, VBA, Lisp, C#.NET, and Dynamo.  You will find a download link to my resume available in the header as well as on the resume page. If you wish to contact me you may reach out from the contact me page.
         </div>
       </div>
     </div>
