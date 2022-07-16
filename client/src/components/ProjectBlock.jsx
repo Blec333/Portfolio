@@ -1,6 +1,6 @@
 import React from 'react';
 
-function ProjectBlock({img, title, date, desc, repo, deploy, download}) {
+function ProjectBlock({ img, title, date, desc, repo, deploy, download}) {
 
 
   return (

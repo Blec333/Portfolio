@@ -128,8 +128,9 @@ export default function Resume() {
         </div>
         <h2 className="text-3xl text-bold underline text-primary-content text-center py-8">EDUCATION</h2>
         <div className="carousel carousel-center py-8 space-x-4 bg-transparent rounded-box">
-          {education.map(edu => (
+          {education.map((edu, i) => (
             <EducationBlock
+              key={i}
               focus={edu.focus}
               school={edu.school}
               dates={edu.dates}
@@ -139,8 +140,9 @@ export default function Resume() {
           ))}
         </div>
         <h2 className="text-3xl text-bold underline text-neutral-content text-center py-8">EXPERIENCE</h2>
-              {experiences.map(experience => (
+              {experiences.map((experience, i) => (
                 <ExperienceBlock
+                  key={i}
                   company={experience.company}
                   location={experience.location}
                   title={experience.title}
@@ -177,8 +179,9 @@ export default function Resume() {
               </tr>
             </thead>
             <tbody>
-              {projects.map(project => (
+              {projects.map((project, i) => (
                 <HistoricalProjectBlock
+                  key={i}
                   projectName={project.projectName}
                   category={project.category}
                   type={project.type}
