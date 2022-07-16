@@ -47,7 +47,7 @@ function App() {
       <Router>
         <div className="flex flex-col h-screen">
           <Header/>
-          <div className="grid flex-1 overflow-y-auto h-screen w-screen place-items-center">
+          <div className="grid flex-1 overflow-y-auto h-screen max-w-screen place-items-center">
             <Routes>
               <Route path="/" element={<Home/>}/>
               <Route path="/account" element={<Account/>}/>

@@ -1,72 +1,117 @@
 import React, { useState } from 'react';
+import { send } from 'emailjs-com';
+
+
 import profilePic from "../../img/Profile-Picture.png";
+import { useEffect } from 'react';
+
+
 
 export default function Contact() {
 
-  const [nameNotification, nameNotify] = useState('');
-  const [emailNotification, emailNotify] = useState('');
-  const [subjectNotification, subjectNotify] = useState('');
-  const [bodyNotification, bodyNotify] = useState('');
-  const [sentEmail, sendEmail] = useState('');
 
 
 
-  const constructEmail = () => {
-    let emailAddress = document.getElementById('email-address').value;
-    let contactName = document.getElementById('contact-name').value;
-    let emailSubject = document.getElementById('email-subject').value;
-    let emailBody = document.getElementById('email-body').value;
-    if (emailAddress && contactName && emailSubject && emailBody) {
-      let email = "mailto:brennanl.dev@gmail.com?subject=" + emailSubject + "&body=" + emailBody + " from: " + contactName + " at " + emailAddress;
-      document.getElementById('send-notification').innerHTML = "";
-      return document.location = email;
+
+
+
+
+
+
+  // const constructEmail = () => {
+  //   let emailAddress = document.getElementById('email-address').value;
+  //   let contactName = document.getElementById('contact-name').value;
+  //   let emailSubject = document.getElementById('email-subject').value;
+  //   let emailBody = document.getElementById('email-body').value;
+  //   if (emailAddress && contactName && emailSubject && emailBody) {
+  //     let email = "mailto:brennanl.dev@gmail.com?subject=" + emailSubject + "&body=" + emailBody + " from: " + contactName + " at " + emailAddress;
+  //     document.getElementById('send-notification').innerHTML = "";
+  //     return document.location = email;
+  //   } else {
+  //     document.getElementById('send-notification').innerHTML = "Please be sure to include all information above";
+  //   }
+  // }
+
+
+
+
+  const [lastEventTarget, setLastEventTarget] = useState({
+    name: '',
+    value: '',
+  });
+
+  const [emailContent, setEmailContent] = useState({
+    attentionTitle: 'ATTENTION FROM PORTFOLIO',
+    fromName: '',
+    fromAddress: '',
+    subject: '',
+    message: '',
+  });
+
+  const [showWarning, setShowWarning] = useState({
+    fromName: '',
+    fromAddress: '',
+    subject: '',
+    message: '',
+    sendAttempt: '',
+  });
+
+  useEffect(() => {
+    if ((lastEventTarget.name === "fromName" || lastEventTarget.name === "subject" || lastEventTarget.name === "message") && lastEventTarget.value === '') {
+      setShowWarning({ ...showWarning, [lastEventTarget.name]: "This field cannot be empty" });
+    } else if ((lastEventTarget.name === "fromAddress") && !(/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/).test(lastEventTarget.value) && !(lastEventTarget.value === '')) {
+      setShowWarning({ ...showWarning, [lastEventTarget.name]: "Your entry must be a valid email address (ie: email.address@provider.com)" });
     } else {
-      document.getElementById('send-notification').innerHTML = "Please be sure to include all information above";
+      setShowWarning({ ...showWarning, [lastEventTarget.name]: '' });
     }
-  }
+  }, [lastEventTarget])
 
-  const displayNameNotification = () => {
-    let contactName = document.getElementById('contact-name').value;
-    if (contactName === "") {
-      document.getElementById('name-notification').innerHTML = "Please enter your name";
+  const handleChange = (e) => {
+    console.log('handlechange')
+    setEmailContent({ ...emailContent, [e.target.name]: e.target.value });
+    setLastEventTarget({ name: e.target.name, value: e.target.value });
+  };
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    if (showWarning.fromName === '' && showWarning.fromAddress === '' && showWarning.subject === '' && showWarning.message === '') {
+      send("service_telqqfg",
+        "portfolio-template",
+        emailContent,
+        'aMIrhQsGU5Esazolk'
+      )
+        .then((response) => {
+          console.log('SUCCESS!', response.status, response.text);
+          setEmailContent({
+            fromName: '',
+            fromAddress: '',
+            subject: '',
+            message: '',
+          });
+          setShowWarning({
+            fromName: '',
+            fromAddress: '',
+            subject: '',
+            message: '',
+            sendAttempt: '',
+          });
+          setShowWarning({ ...showWarning, sendAttempt: 'Thank you for your interest' });
+        })
+        .catch((err) => {
+          console.log('FAILED...', err);
+        });
     } else {
-      document.getElementById('name-notification').innerHTML = "";
+      setShowWarning({ ...showWarning, sendAttempt: 'Please be sure to include all requested information above and correct any identified errors' });
     }
-  }
+  };
 
-  const displayEmailNotification = () => {
-    let emailAddress = document.getElementById('email-address').value;
-    if (emailAddress === "") {
-      document.getElementById('email-notification').innerHTML = "Please enter your email";
-    } else if ((/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/).test(emailAddress)) {
-        document.getElementById('email-notification').innerHTML = "";
-      } else {
-      document.getElementById('email-notification').innerHTML = "Please enter a valid email";
-    }
-  }
 
-  const displaySubjectNotification = () => {
-    let emailSubject = document.getElementById('email-subject').value;
-    if (emailSubject === "") {
-      document.getElementById('subject-notification').innerHTML = "Please include a subject header";
-    } else {
-      document.getElementById('subject-notification').innerHTML = "";
-    }
-  }
 
-  const displayBodyNotification = () => {
-    let emailBody = document.getElementById('email-body').value;
-    if (emailBody === "") {
-      document.getElementById('message-notification').innerHTML = "Please enter a message";
-    } else {
-      document.getElementById('message-notification').innerHTML = "";
-    }
-  }
 
 
   return (
     <>
-    <br />
+      <br />
       <div className="bg-transparent w-full justify-center text-center max-w-5xl">
         <figure>
           <div className="avatar">
@@ -77,57 +122,32 @@ export default function Contact() {
         </figure>
         <br />
         <br />
-        <h1 className="font-semibold text-xl text-primary-content mt-4 text-center">Contact Me</h1>
-        <div className="flex text-center justify-center w-full">
-          <div className="grid grid-cols-2 w-full">
+        <h1 className="font-semibold text-xl text-neutral-content mt-4 text-center">Contact Me</h1>
+        <div className="flex w-full">
+          <div className="flex items-center grid grid-cols-3 w-full">
 
-                <div className="text-primary-content mt-4 mr-4 text-right">Name: </div>
+            <div className="text-neutral-content text-right w-full h-auto mt-4 pr-4 mr-4">Name:</div>
+            <input id="contact-name" className="input input-bordered col-span-2 text-neutral-content w-full mt-4" type="text" name="fromName" placeholder="Please enter your name" value={emailContent.fromName} onChange={handleChange} />
+            <p id="name-notification" className='col-span-3 text-error text-left h-[1rem] pl-[33%] mb-4'>{showWarning.fromName}</p>
 
-                <input id="contact-name" type="text" placeholder="Name" className="input input-bordered table-cell text-primary-content mt-4" onChange={() => nameNotify(displayNameNotification())} />
+            <div className="text-neutral-content text-right w-full h-auto mt-4 pr-4 mr-4">Email:</div>
+            <input id="email-address" className="input input-bordered col-span-2 text-neutral-content w-full mt-4" type="email" name="fromAddress" placeholder="Please enter your return email address" value={emailContent.fromAddress} onChange={handleChange} />
+            <p id="email-notification" className='col-span-3 text-error text-left h-[1rem] pl-[33%] mb-4'>{showWarning.fromAddress}</p>
 
-                <div className=""></div>
+            <div className="text-neutral-content text-right w-full h-auto mt-4 pr-4 mr-4">Subject:</div>
+            <input id="email-subject" className="input input-bordered col-span-2 text-neutral-content w-full mt-4" type="text" name="subject" placeholder="Your email's subject/header" value={emailContent.subject} onChange={handleChange} />
+            <p id="subject-notification" className='col-span-3 text-error text-left h-[1rem] pl-[33%] mb-4'>{showWarning.subject}</p>
 
-                <p id="name-notification" className='h-[1rem] mb-4 ml-4 text-primary-content text-left'>{nameNotification}</p>
+            <div className="text-neutral-content text-right w-full h-auto mt-4 pr-4 mr-4">Message:</div>
+            <textarea id="email-body" className="input input-bordered col-span-2 align-text-start text-neutral-content w-full h-48 mt-4" type="text" name="message" placeholder="Enter your message for me" value={emailContent.message} onChange={handleChange} />
+            <p id="message-notification" className='col-span-3 text-error text-left h-[1rem] pl-[33%] mb-4'>{showWarning.message}</p>
 
-
-
-                <div className="table-cell text-primary-content mt-4 mr-4 text-right">Return Email: </div>
-
-                <input id="email-address" type="text" placeholder="info@site.com" className="input input-bordered table-cell text-primary-content mt-4" onChange={() => emailNotify(displayEmailNotification())} />
-
-                <div className=""></div>
-                <p id="email-notification" className='h-[1rem] mb-4 ml-4 text-primary-content text-left'>{emailNotification}</p>
-            
-
-
-
-                <div className="text-primary-content mt-4 mr-4 text-right">Subject: </div>
-
-                <input id="email-subject" type="text" placeholder="Subject" className="input input-bordered table-cell text-primary-content mt-4" onChange={() => subjectNotify(displaySubjectNotification())} />
-
-                <div className=""></div>
-                
-                <p id="subject-notification" className='h-[1rem] mb-4 ml-4 text-primary-content text-left'>{subjectNotification}</p>
-            
-            
-
-
-                <div className="text-primary-content w-32 h-32 mt-4 mr-4 text-right">Message: </div>
-
-                <input id="email-body" type="text" placeholder="Message" className="input input-bordered table-cell text-primary-content w-32 h-32 mt-4" onChange={() => bodyNotify(displayBodyNotification())} />
-
-                <div className=""></div>
-
-                <p id="message-notification" className='h-[1rem] mb-4 ml-4 text-primary-content text-left'>{bodyNotification}</p>
-            
-
-            
           </div>
         </div>
       </div>
       <div className="flex flex-col items-center justify-center">
-        <p id="send-notification" className='h-[1rem] mb-4 ml-4'></p>
-        <button id="send-email" className="btn btn-secondary w-24 text-primary-content mt-4 text-center" onClick={() => sendEmail(constructEmail())}>Send</button>
+        <p id="send-notification" className={`${showWarning.sendAttempt === 'Thank you for your interest' ? 'text-neutral-content' : 'text-error'} h-[1rem] mb-4 ml-4`}>{showWarning.sendAttempt}</p>
+        <button id="send-email" className="btn btn-secondary w-24 text-neutral-content mt-4 text-center" onClick={sendEmail}>Send</button>
       </div>
     </>
   );

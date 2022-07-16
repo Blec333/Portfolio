@@ -105,7 +105,7 @@ export default function Resume() {
 
   return (
     <>
-      <div className="bg-transparent justify-center text-center max-w-5xl">
+      <div className="bg-transparent justify-center text-center max-w-4xl">
         <br />
         <figure>
           <div className="avatar">
