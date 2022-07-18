@@ -1,10 +1,10 @@
 import React from 'react';
-import CarouselDynamo from '../CarouselDynamo';
-import CarouselMERNStack from '../CarouselMERNStack';
-import CarouselWorkbooks from '../CarouselWorkbooks';
-import CarouselOther from '../CarouselOther';
-import CarouselLisp from '../CarouselLisp';
-import CarouselCSharp from '../CarouselCSharp';
+import CarouselDynamo from '../functional/component-assemblies/CarouselDynamo';
+import CarouselMERNStack from '../functional/component-assemblies/CarouselMERNStack';
+import CarouselWorkbooks from '../functional/component-assemblies/CarouselWorkbooks';
+import CarouselOther from '../functional/component-assemblies/CarouselOther';
+import CarouselLisp from '../functional/component-assemblies/CarouselLisp';
+import CarouselCSharp from '../functional/component-assemblies/CarouselCSharp';
 
 export default function Portfolio() {
 

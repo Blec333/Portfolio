@@ -7,7 +7,7 @@ function ProjectBlock({ img, title, date, desc, repo, deploy, download }) {
     <>
       <div className="carousel-item w-[18rem]">
         <div className="flex flex-col bg-neutral rounded-lg border shadow-md overflow-hidden rounded-box w-[18rem] h-[30rem]">
-          {img ? (<img className="h-[12rem] w-full object-cover" src={img} alt="" />) : ("")}
+          {img ? (<img className="w-full h-[12rem] object-cover" src={img} alt="" />) : ("")}
           <div className="flex flex-col h-full p-3">
             {title ? (<h3 className="font-semibold text-xl leading-6 text-primary-content underline text-center">{title}</h3>) : ("")}
             <br />

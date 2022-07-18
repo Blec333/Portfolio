@@ -1,5 +1,5 @@
 import React from 'react';
-import ProjectBlock from './ProjectBlock';
+import ProjectBlock from './component-blocks/ProjectBlock';
 // import asdfImg from "../img/asdf.gif";
 
 export default function CarouselOther() {

@@ -9,14 +9,14 @@ import { setContext } from '@apollo/client/link/context';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 
-import Header from './components/Header';
+import Header from './components/functional/Header';
 import Home from "./components/pages/Home";
 import Account from './components/pages/Account';
 import AboutMe from './components/pages/AboutMe';
 import Resume from './components/pages/Resume';
 import Portfolio from './components/pages/Portfolio';
 import Contact from './components/pages/Contact';
-import Footer from './components/Footer';
+import Footer from './components/functional/Footer';
 
 
 const httpLink = createHttpLink({

@@ -1,6 +1,6 @@
 import React from 'react';
-import ProjectBlock from './ProjectBlock';
-import kevinSharkImg from "../img/kevin-shark.gif";
+import ProjectBlock from './component-blocks/ProjectBlock';
+import kevinSharkImg from "../../../img/kevin-shark.gif";
 
 export default function CarouselOther() {
   return (

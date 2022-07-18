@@ -8,9 +8,9 @@ import {
   QUERY_EXPERIENCES
 } from "../../utils/queries";
 
-import HistoricalProjectBlock from '../HistoricalProjectBlock';
-import EducationBlock from '../EducationBlock';
-import ExperienceBlock from '../ExperienceBlock';
+import HistoricalProjectBlock from '../functional/component-assemblies/component-blocks/HistoricalProjectBlock';
+import EducationBlock from '../functional/component-assemblies/component-blocks/EducationBlock';
+import ExperienceBlock from '../functional/component-assemblies/component-blocks/ExperienceBlock';
 
 import spinner from '../../assets/spinner.gif';
 import profilePic from "../../img/Profile-Picture.png";

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import ProjectBlock from './ProjectBlock';
-import dynamoImg from "../img/dynamo.jpg";
-import revitImg from "../img/revit.jpg";
+import ProjectBlock from './component-blocks/ProjectBlock';
+import dynamoImg from "../../../img/dynamo.jpg";
+import revitImg from "../../../img/revit.jpg";
 
 export default function CarouselAutodesk() {
 

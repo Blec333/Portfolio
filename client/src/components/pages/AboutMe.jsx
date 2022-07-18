@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { useQuery } from "@apollo/client";
 import { QUERY_INTERESTS } from "../../utils/queries";
 
-import InterestBlock from '../InterestBlock';
+import InterestBlock from '../functional/component-assemblies/component-blocks/InterestBlock';
 
 import profilePic from "../../img/Profile-Picture.png";
 import spinner from '../../assets/spinner.gif';

@@ -1,10 +1,10 @@
 import React from 'react';
-import ProjectBlock from './ProjectBlock';
-import pricingManagementImg from "../img/pricing-management.gif";
-import managementWorkbookImg from "../img/management-workbook.gif";
-import commonEngCalcsImg from "../img/common-engineering-calcs.gif";
-import budgetTemplateImg from "../img/budget-template.gif";
-import quotesoftImg from "../img/quotesoft-pipe-template.jpg";
+import ProjectBlock from './component-blocks/ProjectBlock';
+import pricingManagementImg from "../../../img/pricing-management.gif";
+import managementWorkbookImg from "../../../img/management-workbook.gif";
+import commonEngCalcsImg from "../../../img/common-engineering-calcs.gif";
+import budgetTemplateImg from "../../../img/budget-template.gif";
+import quotesoftImg from "../../../img/quotesoft-pipe-template.jpg";
 
 
 

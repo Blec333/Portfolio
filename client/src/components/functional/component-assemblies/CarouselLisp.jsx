@@ -1,8 +1,8 @@
 
 import React, { useState, useEffect } from "react";
-import ProjectBlock from './ProjectBlock';
-import autocadImg from "../img/autocad.jpg";
-import autoLispImg from "../img/autolisp.jpg";
+import ProjectBlock from './component-blocks/ProjectBlock';
+import autocadImg from "../../../img/autocad.jpg";
+import autoLispImg from "../../../img/autolisp.jpg";
 
 export default function CarouselAutodesk() {
 

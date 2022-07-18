@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 import { useMutation } from "@apollo/client";
-import { ADD_USER } from "../../utils/mutations";
+import { ADD_USER } from "../../../utils/mutations";
 
 // import { useQuery } from "@apollo/client";
 // import { QUERY_GAMES } from "../../utils/queries";
 
-import Auth from "../../utils/auth";
+import Auth from "../../../utils/auth";
 
 // const Signup = () =>
 export default function Signup() {

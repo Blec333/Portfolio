@@ -1,17 +1,17 @@
 import React from 'react';
-import ProjectBlock from './ProjectBlock';
-import portfolioImg from "../img/portfolio.jpg";
-import adventureQuestImg from "../img/AdventureQuest.gif";
-import pokerTableImg from "../img/poker-table.gif";
-import socialMediaApiImg from "../img/social-media-api.gif";
-import travelCenterImg from "../img/search-demo.gif";
-import jateImg from "../img/jate.gif";
-import weatherDashboardImg from "../img/Weather Dashboard.gif";
-import schedulerImg from "../img/Work Day Scheduler.gif";
-import cssImg from "../img/CSS.gif";
-import pwGeneratorImg from "../img/pwGenerator.gif";
-import generateMDImg from "../img/generateMD.gif";
-import rpsImg from "../img/rps.jpg";
+import ProjectBlock from './component-blocks/ProjectBlock';
+import portfolioImg from "../../../img/portfolio.jpg";
+import adventureQuestImg from "../../../img/AdventureQuest.gif";
+import pokerTableImg from "../../../img/poker-table.gif";
+import socialMediaApiImg from "../../../img/social-media-api.gif";
+import travelCenterImg from "../../../img/search-demo.gif";
+import jateImg from "../../../img/jate.gif";
+import weatherDashboardImg from "../../../img/Weather Dashboard.gif";
+import schedulerImg from "../../../img/Work Day Scheduler.gif";
+import cssImg from "../../../img/CSS.gif";
+import pwGeneratorImg from "../../../img/pwGenerator.gif";
+import generateMDImg from "../../../img/generateMD.gif";
+import rpsImg from "../../../img/rps.jpg";
 
 export default function CarouselMERNStack() {
   return (

@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
-import resumeDownload from "../assets/LeClair-Resume.docx";
-import save from "../img/floppy.png";
+import resumeDownload from "../../assets/LeClair-Resume.docx";
+import save from "../../img/floppy.png";
 
-import Auth from "../utils/auth";
+import Auth from "../../utils/auth";
 
 
 function Header() {

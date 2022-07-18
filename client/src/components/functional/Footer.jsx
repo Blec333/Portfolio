@@ -1,7 +1,7 @@
 import React from 'react';
-import stackOverflow from "../img/stackoverflow.png";
-import github from "../img/github.png";
-import linkedin from "../img/linkedin.png";
+import stackOverflow from "../../img/stackoverflow.png";
+import github from "../../img/github.png";
+import linkedin from "../../img/linkedin.png";
 
 function Footer() {
   return (
