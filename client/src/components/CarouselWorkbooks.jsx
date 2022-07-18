@@ -6,10 +6,23 @@ import commonEngCalcsImg from "../img/common-engineering-calcs.gif";
 import budgetTemplateImg from "../img/budget-template.gif";
 import quotesoftImg from "../img/quotesoft-pipe-template.jpg";
 
+
+
+
+
+
+
 export default function CarouselWorkbook() {
+
+
+
+
+
+
+
   return (
     <>
-      <div className="carousel carousel-center p-4 space-x-4 bg-transparent rounded-box">
+      <div className="carousel carousel-center border bt-1 p-4 mb-8 space-x-4 bg-transparent rounded-box w-screen overflow-x-auto">
         <ProjectBlock
           img={pricingManagementImg}
           title={'Pricing Management Workbook'}

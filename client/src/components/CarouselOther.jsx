@@ -5,7 +5,7 @@ import kevinSharkImg from "../img/kevin-shark.gif";
 export default function CarouselOther() {
   return (
     <>
-      <div className="carousel carousel-center p-4 space-x-4 bg-transparent rounded-box">
+      <div className="carousel carousel-center border bt-1 p-4 mb-8 space-x-4 bg-transparent rounded-box w-screen overflow-x-auto">
         <ProjectBlock
           img={kevinSharkImg}
           title={'Kevin Shark Attack'}
