@@ -46,8 +46,10 @@ function App() {
     <ApolloProvider client={client}>
       <Router>
         <div className="flex flex-col w-screen h-screen">
+          <div className="z-1">
           <Header/>
-          <div className="flex overflow-y-auto w-full p-3">
+          </div>
+          <div className="flex overflow-y-auto w-full h-screen p-3">
             <Routes>
               <Route path="/" element={<Home/>}/>
               <Route path="/account" element={<Account/>}/>
@@ -57,7 +59,9 @@ function App() {
               <Route path="/contact" element={<Contact/>}/>
             </Routes>
           </div>
+          <div className="z-1">
           <Footer/>
+          </div>
         </div>
       </Router>
     </ApolloProvider>

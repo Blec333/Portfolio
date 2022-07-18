@@ -107,14 +107,14 @@ export default function Resume() {
     <>
       <div className="bg-transparent justify-center text-center w-full">
         <br />
-        <figure>
-          <div className="avatar">
-            <div className="w-24 mask mask-squircle">
-              <img alt="Headshot" src={profilePic} />
-            </div>
+      <figure>
+        <div className="flex justify-center">
+          <div className="w-24 h-24 rounded-[33px] overflow-hidden">
+            <img alt="Headshot" src={profilePic} />
           </div>
-        </figure>
-        <div className="z-20 card-body justify-center">
+        </div>
+      </figure>
+        <div className="card-body justify-center">
           <h1 className="card-title text-primary-content justify-center text-center">Brennan LeClair</h1>
           <div className="card-actions justify-center">
             <a href={resumeDownload} download=""><button className="btn btn-secondary text-primary-content text-center">Download Resume</button></a>

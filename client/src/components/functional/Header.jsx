@@ -14,7 +14,7 @@ function Header() {
   return (
     <>
       <nav>
-        <div className="header z-20 flex flex-wrap justify-between items-center p-4 bg-neutral text-neutral-content">
+        <div className="header flex flex-wrap justify-between items-center p-4 bg-neutral text-neutral-content">
           <div className="items-center grid-flow-col">
             <Link className="btn normal-case text-xl" to="/" onClick={() => updateHeader()}>Brennan LeClair</Link>
           </div>

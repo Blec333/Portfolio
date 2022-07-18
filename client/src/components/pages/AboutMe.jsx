@@ -34,13 +34,13 @@ export default function AboutMe() {
       <div className="bg-transparent w-full justify-center text-center">
         <br />
         <figure>
-          <div className="avatar">
-            <div className="w-24 mask mask-squircle">
+          <div className="flex justify-center">
+            <div className="w-24 h-24 rounded-[33px] overflow-hidden">
               <img alt="Headshot" src={profilePic} />
             </div>
           </div>
         </figure>
-        <div className="z-20 card-body justify-center">
+        <div className="card-body justify-center">
           <h1 className="card-title text-primary-content justify-center text-center">Brennan LeClair</h1>
           <p className="text-primary-content text-center">Software Developer</p>
           <p className="text-primary-content text-center">(619) 354-7965</p>

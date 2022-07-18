@@ -11,30 +11,6 @@ export default function Contact() {
 
 
 
-
-
-
-
-
-
-
-  // const constructEmail = () => {
-  //   let emailAddress = document.getElementById('email-address').value;
-  //   let contactName = document.getElementById('contact-name').value;
-  //   let emailSubject = document.getElementById('email-subject').value;
-  //   let emailBody = document.getElementById('email-body').value;
-  //   if (emailAddress && contactName && emailSubject && emailBody) {
-  //     let email = "mailto:brennanl.dev@gmail.com?subject=" + emailSubject + "&body=" + emailBody + " from: " + contactName + " at " + emailAddress;
-  //     document.getElementById('send-notification').innerHTML = "";
-  //     return document.location = email;
-  //   } else {
-  //     document.getElementById('send-notification').innerHTML = "Please be sure to include all information above";
-  //   }
-  // }
-
-
-
-
   const [lastEventTarget, setLastEventTarget] = useState({
     name: '',
     value: '',
@@ -114,8 +90,8 @@ export default function Contact() {
       <br />
       <div className="bg-transparent w-full justify-center text-center max-w-5xl">
         <figure>
-          <div className="avatar">
-            <div className="w-24 mask mask-squircle">
+          <div className="flex justify-center">
+            <div className="w-24 h-24 rounded-[33px] overflow-hidden">
               <img alt="Headshot" src={profilePic} />
             </div>
           </div>
@@ -144,10 +120,10 @@ export default function Contact() {
 
           </div>
         </div>
-      </div>
-      <div className="flex flex-col items-center justify-center">
-        <p id="send-notification" className={`${showWarning.sendAttempt === 'Thank you for your interest' ? 'text-neutral-content' : 'text-error'} h-[1rem] mb-4 ml-4`}>{showWarning.sendAttempt}</p>
-        <button id="send-email" className="btn btn-secondary w-24 text-neutral-content mt-4 text-center" onClick={sendEmail}>Send</button>
+        <div className="flex flex-col items-center justify-center">
+          <p id="send-notification" className={`${showWarning.sendAttempt === 'Thank you for your interest' ? 'text-neutral-content' : 'text-error'} h-[1rem] mb-4 ml-4`}>{showWarning.sendAttempt}</p>
+          <button id="send-email" className="btn btn-secondary w-24 text-neutral-content mt-4 text-center" onClick={sendEmail}>Send</button>
+        </div>
       </div>
     </>
   );
