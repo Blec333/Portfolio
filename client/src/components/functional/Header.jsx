@@ -14,11 +14,11 @@ function Header() {
   return (
     <>
       <nav>
-        <div className="navbar z-20 bg-neutral text-primary-content">
-          <div className="flex-1">
+        <div className="header z-20 flex flex-wrap justify-between items-center p-4 bg-neutral text-neutral-content">
+          <div className="items-center grid-flow-col">
             <Link className="btn normal-case text-xl" to="/" onClick={() => updateHeader()}>Brennan LeClair</Link>
           </div>
-          <div className="flex-none">
+          <div className="grid-flow-col gap-2 md:place-self-center md:justify-self-end">
             <ul className="menu menu-horizontal p-0">
 
             {Auth.loggedIn()

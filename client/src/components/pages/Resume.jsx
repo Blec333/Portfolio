@@ -105,7 +105,7 @@ export default function Resume() {
 
   return (
     <>
-      <div className="bg-transparent justify-center text-center max-w-4xl">
+      <div className="bg-transparent justify-center text-center w-full">
         <br />
         <figure>
           <div className="avatar">
@@ -164,9 +164,9 @@ export default function Resume() {
                   description15={experience.description15}
                 />
               ))}
-        <h2 className="text-3xl text-bold underline text-primary-content text-center py-8">PROJECTS</h2>
-        <div className="flex overflow-x-auto bg-transparent text-center justify-center">
-          <table className="table-auto text-primary-content text-center">
+        <h2 className="text-3xl text-bold underline text-neutral-content text-center py-8">PROJECTS</h2>
+        <div className="flex bg-transparent text-center justify-center">
+          <table className="table-auto text-neutral-content text-center" style={{ fontSize: "1.55vw" }}>
             <thead>
               <tr>
                 <th className="text-center">Name</th>

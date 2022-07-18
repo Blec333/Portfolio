@@ -31,7 +31,7 @@ export default function AboutMe() {
 
   return (
     <>
-      <div className="bg-transparent w-full justify-center text-center max-w-5xl">
+      <div className="bg-transparent w-full justify-center text-center">
         <br />
         <figure>
           <div className="avatar">
@@ -54,7 +54,7 @@ export default function AboutMe() {
           <div className="text-primary-content text-center p-3 m-3">As an accomplished professional with 8+ years of industry experience, I understand the importance of delivering technology-driven solutions. My experience has proven that developing custom software solutions to accomplish project objectives is a key contributing factor to the success of any project.
           </div>
           <div className="text-primary-content text-center p-3 m-3">
-          My talents with VBA, Lisp, C#.NET, and Dynamo have contributed greatly to operational efficiency and productivity in previous roles. In addition, my technological skills extend to the development of responsive software such as web applications within the MERN stack which can be found via my portfolio (linked below). I am adept in interpersonal communication and a consistent collaborator in implementing technological innovations for process improvement. Examples include the development of new tools to manage workflow and financial information with data analysis summaries.
+          My talents with VBA, Lisp, C#.NET, and Dynamo have contributed greatly to operational efficiency and productivity in previous roles. In addition, my technological skills extend to the development of responsive software such as web applications within the MERN stack which can be found on the portfolio page of this site (see link withn "Pages" above). I am adept in interpersonal communication and a consistent collaborator in implementing technological innovations for process improvement. Examples include the development of new tools to manage workflow and financial information with data analysis summaries.
         </div>
         <div className="text-primary-content text-center p-3 m-3">
           My past experience has enabled me to expand and acquire expertise in developing budget estimates, determining staff requirements, project scoping, and scheduling. I have also demonstrated expertise in systems optimizations throughout my career. Focusing on improved communication and collaborative synergy, I introduced SharePoint architecture, organized tiered Sharepoint permission protocols, configured Microsoft Teams, and assisted in managing Active Directory. Moreover, I created comprehensive workbooks, schedules, and templates, which standardized the optimal project workflow for estimating and operations.

@@ -45,9 +45,9 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <Router>
-        <div className="flex flex-col h-screen">
+        <div className="flex flex-col w-screen h-screen">
           <Header/>
-          <div className="grid flex-1 overflow-y-auto overflow-x-hidden w-screen place-items-center">
+          <div className="flex overflow-y-auto w-full p-3">
             <Routes>
               <Route path="/" element={<Home/>}/>
               <Route path="/account" element={<Account/>}/>
