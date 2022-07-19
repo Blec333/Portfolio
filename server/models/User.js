@@ -86,7 +86,7 @@ const userSchema = new Schema(
       type: String,
       required: true,
     },
-    orders: [Order.schema],
+    // orders: [Order.schema],
     // recommendations: [recommendationSchema],
   },
   // set this to use virtual below
