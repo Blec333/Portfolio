@@ -15,7 +15,7 @@ export default function Portfolio() {
 
   return (
     <>
-      <div className="flex flex-col justify-center items-center">
+      <div className="flex flex-col justify-center items-center overflow-y-auto m-3">
 
         <h1 className="text-center text-3xl text-neutral-content fontsize-bold mt-4">MERN Stack</h1>
         <CarouselMERNStack />

@@ -196,15 +196,17 @@ export default function CarouselAutodesk() {
 
   return (
     <>
-      <div className="carousel carousel-center border bt-1 p-4 mb-8 space-x-4 bg-transparent rounded-box w-screen overflow-x-auto">
-        <ProjectBlock
-          img={autocadImg}
-          title={'AutoCAD'}
-          date={'2017'}
-          desc={'Lisp, VB.COD & C# which add custom commands to your AutoCAD workflow'}
-          repo={'https://github.com/Blec333/autodesk-autocad'}
-        />
-        {customCommands.map((command, i) =>
+      <div className='flex border rounded-box items-center w-full bt-1 p-4 mb-8'>
+        <span class="text-3xl">{'<'}</span>
+        <div className="carousel carousel-center space-x-4 bg-transparent w-full overflow-x-auto">
+          <ProjectBlock
+            img={autocadImg}
+            title={'AutoCAD'}
+            date={'2017'}
+            desc={'Lisp, VB.COD & C# which add custom commands to your AutoCAD workflow'}
+            repo={'https://github.com/Blec333/autodesk-autocad'}
+          />
+          {customCommands.map((command, i) =>
             <ProjectBlock
               key={i + 1}
               img={autoLispImg}
@@ -213,7 +215,9 @@ export default function CarouselAutodesk() {
               desc={`Command Name: ${command} -- reminder: may require utility functions (link above)`}
               repo={`https://github.com/Blec333/autodesk-autocad/blob/main/Lisp/customCommands/cc-${i + 1}-${command}.lsp`}
             />
-        )}
+          )}
+        </div>
+        <span class="text-3xl">{'>'}</span>
       </div>
     </>
   );

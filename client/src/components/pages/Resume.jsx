@@ -105,15 +105,15 @@ export default function Resume() {
 
   return (
     <>
-      <div className="bg-transparent justify-center text-center w-full">
+      <div className="flex flex-col bg-transparent items-center text-center w-full">
         <br />
-      <figure>
-        <div className="flex justify-center">
-          <div className="w-24 h-24 rounded-[33px] overflow-hidden">
-            <img alt="Headshot" src={profilePic} />
+        <figure>
+          <div className="flex justify-center">
+            <div className="w-24 h-24 rounded-[33px] overflow-hidden">
+              <img alt="Headshot" src={profilePic} />
+            </div>
           </div>
-        </div>
-      </figure>
+        </figure>
         <div className="card-body justify-center">
           <h1 className="card-title text-primary-content justify-center text-center">Brennan LeClair</h1>
           <div className="card-actions justify-center">
@@ -140,33 +140,35 @@ export default function Resume() {
           ))}
         </div>
         <h2 className="text-3xl text-bold underline text-neutral-content text-center py-8">EXPERIENCE</h2>
-              {experiences.map((experience, i) => (
-                <ExperienceBlock
-                  key={i}
-                  company={experience.company}
-                  location={experience.location}
-                  title={experience.title}
-                  dateRange={experience.dateRange}
-                  description1={experience.description1}
-                  description2={experience.description2}
-                  description3={experience.description3}
-                  description4={experience.description4}
-                  description5={experience.description5}
-                  description6={experience.description6}
-                  description7={experience.description7}
-                  description8={experience.description8}
-                  description9={experience.description9}
-                  description10={experience.description10}
-                  description11={experience.description11}
-                  description12={experience.description12}
-                  description13={experience.description13}
-                  description14={experience.description14}
-                  description15={experience.description15}
-                />
-              ))}
+        <div className='text-left'>
+          {experiences.map((experience, i) => (
+            <ExperienceBlock
+              key={i}
+              company={experience.company}
+              location={experience.location}
+              title={experience.title}
+              dateRange={experience.dateRange}
+              description1={experience.description1}
+              description2={experience.description2}
+              description3={experience.description3}
+              description4={experience.description4}
+              description5={experience.description5}
+              description6={experience.description6}
+              description7={experience.description7}
+              description8={experience.description8}
+              description9={experience.description9}
+              description10={experience.description10}
+              description11={experience.description11}
+              description12={experience.description12}
+              description13={experience.description13}
+              description14={experience.description14}
+              description15={experience.description15}
+            />
+          ))}
+        </div>
         <h2 className="text-3xl text-bold underline text-neutral-content text-center py-8">PROJECTS</h2>
         <div className="flex bg-transparent text-center justify-center">
-          <table className="table-auto text-neutral-content text-center" style={{ fontSize: "1.55vw" }}>
+          <table className="table-auto text-neutral-content text-center text-[1.25vw] lg:text-base">
             <thead>
               <tr>
                 <th className="text-center">Name</th>

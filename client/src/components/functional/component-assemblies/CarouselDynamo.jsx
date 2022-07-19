@@ -33,15 +33,17 @@ export default function CarouselAutodesk() {
 
   return (
     <>
-      <div className="carousel carousel-center border bt-1 p-4 mb-8 space-x-4 bg-transparent rounded-box w-screen overflow-x-auto">
-        <ProjectBlock
-          img={revitImg}
-          title={'Revit'}
-          date={'2019'}
-          desc={'Dynamo scripts to assist your Revit workflow'}
-          repo={'https://github.com/Blec333/autodesk-revit'}
-        />
-        {dynamoScripts.map((script, i) =>
+      <div className='flex border rounded-box items-center w-full bt-1 p-4 mb-8'>
+        <span class="text-3xl">{'<'}</span>
+        <div className="carousel carousel-center space-x-4 bg-transparent w-full overflow-x-auto">
+          <ProjectBlock
+            img={revitImg}
+            title={'Revit'}
+            date={'2019'}
+            desc={'Dynamo scripts to assist your Revit workflow'}
+            repo={'https://github.com/Blec333/autodesk-revit'}
+          />
+          {dynamoScripts.map((script, i) =>
             <ProjectBlock
               key={i + 1}
               img={dynamoImg}
@@ -50,9 +52,10 @@ export default function CarouselAutodesk() {
               desc={`Command Name: ${script} -- reminder: may require utility functions (link above)`}
               repo={`https://github.com/Blec333/autodesk-revit/tree/main/dynamo/${script}.dyn`}
             />
-        )}
+          )}
+        </div>
+        <span class="text-3xl">{'>'}</span>
       </div>
-      <hr></hr>
     </>
   );
 }

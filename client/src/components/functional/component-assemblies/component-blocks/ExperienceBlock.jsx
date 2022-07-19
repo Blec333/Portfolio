@@ -32,7 +32,7 @@ function ExperienceBlock({
 
   return (
     <>
-      <div className="grid grid-cols-2 text-center text-neutral-content">
+      <div className="grid grid-cols-2 text-neutral-content">
         <div className="text-left pt-4">{company ? (company) : ("")}</div>
         <div className="text-right pt-4">{location ? (location) : ("")}</div>
         <div className="text-left pb-4">{title ? (title) : ("")}</div>

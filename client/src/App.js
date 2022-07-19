@@ -16,6 +16,7 @@ import AboutMe from './components/pages/AboutMe';
 import Resume from './components/pages/Resume';
 import Portfolio from './components/pages/Portfolio';
 import Contact from './components/pages/Contact';
+import Certifications from './components/pages/Certifications';
 import Footer from './components/functional/Footer';
 
 
@@ -49,7 +50,7 @@ function App() {
           <div className="z-1">
           <Header/>
           </div>
-          <div className="flex overflow-y-auto w-full h-screen p-3">
+          <div className="overflow-y-auto w-full h-full p-3">
             <Routes>
               <Route path="/" element={<Home/>}/>
               <Route path="/account" element={<Account/>}/>
@@ -57,6 +58,7 @@ function App() {
               <Route path="/portfolio" element={<Portfolio/>}/>
               <Route path="/resume" element={<Resume/>}/>
               <Route path="/contact" element={<Contact/>}/>
+              <Route path="/certifications" element={<Certifications/>}/>
             </Routes>
           </div>
           <div className="z-1">

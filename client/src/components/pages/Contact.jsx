@@ -87,8 +87,8 @@ export default function Contact() {
 
   return (
     <>
-      <br />
-      <div className="bg-transparent w-full justify-center text-center max-w-5xl">
+    <div className='flex justify-center'>
+      <div className="bg-transparent w-2/3 justify-center text-center p-12">
         <figure>
           <div className="flex justify-center">
             <div className="w-24 h-24 rounded-[33px] overflow-hidden">
@@ -99,8 +99,8 @@ export default function Contact() {
         <br />
         <br />
         <h1 className="font-semibold text-xl text-neutral-content mt-4 text-center">Contact Me</h1>
-        <div className="flex w-full">
-          <div className="flex items-center grid grid-cols-3 w-full">
+        <div className="flex justify-center w-full">
+          <div className="flex items-center grid grid-cols-3 w-2/3">
 
             <div className="text-neutral-content text-right w-full h-auto mt-4 pr-4 mr-4">Name:</div>
             <input id="contact-name" className="input input-bordered col-span-2 text-neutral-content w-full mt-4" type="text" name="fromName" placeholder="Please enter your name" value={emailContent.fromName} onChange={handleChange} />
@@ -125,6 +125,7 @@ export default function Contact() {
           <button id="send-email" className="btn btn-secondary w-24 text-neutral-content mt-4 text-center" onClick={sendEmail}>Send</button>
         </div>
       </div>
+    </div>
     </>
   );
 }

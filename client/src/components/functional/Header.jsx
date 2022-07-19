@@ -20,7 +20,6 @@ function Header() {
           </div>
           <div className="grid-flow-col gap-2 md:place-self-center md:justify-self-end">
             <ul className="menu menu-horizontal p-0">
-
             {Auth.loggedIn()
             ?
             <li tabIndex="0">
@@ -31,8 +30,6 @@ function Header() {
                 <Link to="/account" className={window.location.pathname === '/account' ? 'nav-link active' : 'nav-link'} onClick={() => updateHeader()}>Login🔑</Link>
               </li>
             }
-
-
               <li tabIndex="0">
                 <a href="/">Pages<svg className="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" onClick={() => updateHeader()} /></svg></a>
                 <ul className="p-2 bg-neutral text-primary-content">
@@ -47,6 +44,9 @@ function Header() {
                   </li>
                   <li className="text-lg text-color-primary px-2 mx-2">
                     <Link to="/contact" className={window.location.pathname === '/contact' ? 'nav-link active' : 'nav-link'} onClick={() => updateHeader()}>🤙 Contact</Link>
+                  </li>
+                  <li className="text-lg text-color-primary px-2 mx-2">
+                    <Link to="/certifications" className={window.location.pathname === '/certifications' ? 'nav-link active' : 'nav-link'} onClick={() => updateHeader()}>Certifications</Link>
                   </li>
                 </ul>
               </li>
