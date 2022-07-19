@@ -86,6 +86,7 @@ const userSchema = new Schema(
       type: String,
       required: true,
     },
+    
     // orders: [Order.schema],
     // recommendations: [recommendationSchema],
   },
