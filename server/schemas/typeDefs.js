@@ -5,11 +5,37 @@ const typeDefs = gql`
     _id: ID
     username: String
     email: String
+    orders: [Order]
   }
 
   type Auth {
     token: ID
     user: User
+  }
+
+  type Checkout {
+    session: ID
+  }
+
+  type Category {
+    _id: ID
+    name: String
+  }
+
+  type Product {
+    _id: ID
+    name: String
+    description: String
+    image: String
+    quantity: Int
+    price: Float
+    category: Category
+  }
+
+  type Order {
+    _id: ID
+    purchaseDate: String
+    products: [Product]
   }
 
   type Project {
@@ -87,6 +113,11 @@ const typeDefs = gql`
     coreCompetencies: [CoreCompetency]
     coreCompetency(coreCompetencyId: ID!): CoreCompetency
     me: User
+    categories: [Category]
+    products(category: ID, name: String): [Product]
+    product(_id: ID!): Product
+    order(_id: ID!): Order
+    checkout(products: [ID]!): Checkout
   }
 
   type Mutation {
@@ -94,6 +125,8 @@ const typeDefs = gql`
     login(username: String!, password: String!): Auth
     updateUser(userId: ID!, email: String, password: String): User
     removeUser(userId: ID!): User
+    addOrder(products: [ID]!): Order
+    updateProduct(_id: ID!, quantity: Int!): Product
   }
 `;
 

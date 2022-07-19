@@ -5,6 +5,9 @@ const Education = require('./Education');
 const Experience = require('./Experience');
 const TechnicalSkill = require('./TechnicalSkill');
 const CoreCompetency = require('./CoreCompetency');
+const Product = require('./Product');
+const Category = require('./Category');
+const Order = require('./Order');
 
 module.exports = {
   User,
@@ -13,5 +16,8 @@ module.exports = {
   Education,
   Experience,
   TechnicalSkill,
-  CoreCompetency
+  CoreCompetency,
+  Product,
+  Category,
+  Order 
 };
