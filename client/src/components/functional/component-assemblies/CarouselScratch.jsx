@@ -2,7 +2,7 @@ import React from 'react';
 import ProjectBlock from './component-blocks/ProjectBlock';
 import kevinSharkImg from "../../../img/kevin-shark.gif";
 
-export default function CarouselOther() {
+export default function CarouselScratch() {
   return (
     <>
       <div className='flex border rounded-box items-center w-full bt-1 p-4 mb-8'>

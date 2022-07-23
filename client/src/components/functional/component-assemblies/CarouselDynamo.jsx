@@ -3,7 +3,7 @@ import ProjectBlock from './component-blocks/ProjectBlock';
 import dynamoImg from "../../../img/dynamo.jpg";
 import revitImg from "../../../img/revit.jpg";
 
-export default function CarouselAutodesk() {
+export default function CarouselDynamo() {
 
 
 
@@ -47,7 +47,7 @@ export default function CarouselAutodesk() {
             <ProjectBlock
               key={i + 1}
               img={dynamoImg}
-              title={`CADmep Custom Command #${i + 1}`}
+              title={`Dynamo Script #${i + 1} of ${dynamoScripts.length}`}
               date={'2018'}
               desc={`Command Name: ${script} -- reminder: may require utility functions (link above)`}
               repo={`https://github.com/Blec333/autodesk-revit/tree/main/dynamo/${script}.dyn`}

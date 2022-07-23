@@ -2,8 +2,9 @@ import React from 'react';
 import CarouselDynamo from '../functional/component-assemblies/CarouselDynamo';
 import CarouselMERNStack from '../functional/component-assemblies/CarouselMERNStack';
 import CarouselWorkbooks from '../functional/component-assemblies/CarouselWorkbooks';
-import CarouselOther from '../functional/component-assemblies/CarouselOther';
+import CarouselScratch from '../functional/component-assemblies/CarouselScratch';
 import CarouselLisp from '../functional/component-assemblies/CarouselLisp';
+import CarouselVBCod from '../functional/component-assemblies/CarouselVBCod';
 import CarouselCSharp from '../functional/component-assemblies/CarouselCSharp';
 
 export default function Portfolio() {
@@ -20,7 +21,7 @@ export default function Portfolio() {
         <h1 className="text-center text-3xl text-neutral-content fontsize-bold mt-4">MERN Stack</h1>
         <CarouselMERNStack />
 
-        <h1 className="text-center text-3xl text-neutral-content fontsize-bold mt-4">C# ASP.NET</h1>
+        <h1 className="text-center text-3xl text-neutral-content fontsize-bold mt-4">C#</h1>
         <CarouselCSharp />
 
         <div className='flex gap-4 items-center mt-4'>
@@ -29,14 +30,17 @@ export default function Portfolio() {
         </div>
         <CarouselLisp />
 
+        <h1 className="text-center text-3xl text-neutral-content fontsize-bold mt-4">VB.COD</h1>
+        <CarouselVBCod />
+
         <h1 className="text-center text-3xl text-neutral-content fontsize-bold mt-4">DYNAMO</h1>
         <CarouselDynamo />
 
         <h1 className="text-center text-3xl text-neutral-content fontsize-bold mt-4">WORKBOOKS</h1>
         <CarouselWorkbooks />
 
-        <h1 className="text-center text-3xl text-neutral-content fontsize-bold mt-4">Other</h1>
-        <CarouselOther />
+        <h1 className="text-center text-3xl text-neutral-content fontsize-bold mt-4">Scratch</h1>
+        <CarouselScratch />
 
       </div>
     </>

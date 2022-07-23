@@ -4,7 +4,7 @@ import ProjectBlock from './component-blocks/ProjectBlock';
 import autocadImg from "../../../img/autocad.jpg";
 import autoLispImg from "../../../img/autolisp.jpg";
 
-export default function CarouselAutodesk() {
+export default function CarouselLisp() {
 
 
   const [customCommands, setCustomCommands] = useState([]);
@@ -210,7 +210,7 @@ export default function CarouselAutodesk() {
             <ProjectBlock
               key={i + 1}
               img={autoLispImg}
-              title={`CADmep Custom Command #${i + 1}`}
+              title={`CADmep Custom Command #${i + 1} of ${customCommands.length}`}
               date={'2018'}
               desc={`Command Name: ${command} -- reminder: may require utility functions (link above)`}
               repo={`https://github.com/Blec333/autodesk-autocad/blob/main/Lisp/customCommands/cc-${i + 1}-${command}.lsp`}
