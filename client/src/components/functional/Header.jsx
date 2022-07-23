@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
-import resumeDownload from "../../assets/LeClair-Resume.docx";
+import resumeDownload from "../../assets/Brennan_LeClair_Resume.docx";
 import save from "../../img/floppy.png";
 
 import Auth from "../../utils/auth";

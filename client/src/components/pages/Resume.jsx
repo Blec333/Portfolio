@@ -14,7 +14,7 @@ import ExperienceBlock from '../functional/component-assemblies/component-blocks
 
 import spinner from '../../assets/spinner.gif';
 import profilePic from "../../img/Profile-Picture.png";
-import resumeDownload from "../../assets/LeClair-Resume.docx";
+import resumeDownload from "../../assets/Brennan_LeClair_Resume.docx";
 
 
 
