@@ -39,7 +39,7 @@ export default function CarouselMERNStack() {
             img={pokerTableImg}
             title={'Casino'}
             date={'Jun 2022'}
-            desc={'Collab: Enter the casino, take a seat at the poker table and enjoy the game'}
+            desc={'Enter the casino, take a seat at the poker table and enjoy the game'}
             repo={'https://github.com/Blec333/cant-read-my-poker-face'}
             deploy={'https://blec-casino.herokuapp.com/'}
           />

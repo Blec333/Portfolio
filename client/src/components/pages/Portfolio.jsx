@@ -30,7 +30,7 @@ export default function Portfolio() {
         </div>
         <CarouselLisp />
 
-        <h1 className="text-center text-3xl text-neutral-content fontsize-bold mt-4">VB.COD</h1>
+        <h1 className="text-center text-3xl text-neutral-content fontsize-bold mt-4">Fab.cod (VB)</h1>
         <CarouselVBCod />
 
         <h1 className="text-center text-3xl text-neutral-content fontsize-bold mt-4">DYNAMO</h1>

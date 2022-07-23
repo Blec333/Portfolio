@@ -14,15 +14,39 @@ export default function CarouselVBCod() {
 
   const setVBCodArray = () => {
     setVBCods([
+      "Update_Existing_Dampers",
+      "38Rod_Switch Damper to 38Rod",
+      "AP_Anchor Plate",
       "Bought_Out_Off",
       "C1_to_1 Flg Out",
+      "CC_Connection Cycling",
+      "CF_Connection Fix",
+      "DC_Damper Cycling",
+      "DEdit_Dimension Edit",
       "DSF_Dimside Off",
+      "DSO_Dimside On",
+      "FCT_Fix Cut Type",
+      "FRSC_Fix Round Straight Connectors",
+      "FSD90_Rotate Motor",
+      "HS_Hanger Stretch to Section",
+      "IC_Insulation Cycling",
+      "IG_Insulation Gauge",
+      "IR_Insulation Repair",
+      "ISC_Item Specification Cycle",
+      "ISR_Item Specification Repair",
       "itemupdate",
+      "KS7L_Switch Damper to KS7L",
+      "OEdit_Option Edit",
+      "Resource_DoubleWall_Inside",
+      "RN_Renumber",
       "SD_SizeDown",
-      "SD_SizeUp",
-      "Update_Existing_Dampers"
+      "SU_SizeUp",
+      "TD_Toggle Dimside",
+      "TG_Toggle Grille",
+      "TNF_Toggle No Fly Zone"
     ])
   }
+
 
 
 
@@ -35,7 +59,7 @@ export default function CarouselVBCod() {
             <ProjectBlock
               key={i + 1}
               img={VBCodImg}
-              title={`Visual Basic COD #${i + 1} of ${VBCods.length}`}
+              title={`Fab COD #${i + 1} of ${VBCods.length}`}
               date={'2016'}
               desc={`Script Name: ${cod} -- use Execute Script command to access`}
               repo={`https://github.com/Blec333/autodesk-autocad/tree/main/VB.COD${cod}.cod`}
