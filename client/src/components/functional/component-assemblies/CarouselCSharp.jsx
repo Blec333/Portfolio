@@ -16,7 +16,7 @@ export default function CarouselCSharp() {
             title={'Tournament'}
             date={'Jul 2022'}
             desc={`WIP: Manage your own tournaments`}
-            repo={'https://github.com/Blec333/csharp/tree/main/tournament'}
+            repo={'https://github.com/Blec333/csharp/tree/main/TournamentTracker'}
           />
           <ProjectBlock
             img={adskCSImg}
